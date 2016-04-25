@@ -28,7 +28,7 @@ Once you have configured the parameters and you are sure that your server applic
 The server application must implement the next methods:
 
 #### Base
-Loads all the base elements, like the application users. Doesn't need to be loged, because there are no sensible 
+Loads all the base elements, like the application users, the grants to the different buttons.. When this method is called, there may not be any user logged in. 
 > {**server parameter**}/pointofsale/base
 
         Request POST Parameters
