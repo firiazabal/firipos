@@ -31,15 +31,18 @@ The server application must implement the next methods:
 Implements the login process where the user identifies in the firiPOS. This can occur when the firiPOS starts or when the user switches the employee by selecting another one from the top right select of the screen.
 > {**server parameter**}/pointofsale/login
 
-**Request Parameters**
-- **terminal**: The "Terminal ID" defined in the Configuration window. 
-- **user**: The user ID that the server application has asigned to the users array.
-- **password**: The password inserted by the user.
-
-**Response**
-- **id**: The user ID that will be sent on each operation, in order to identify it in your server application.
-- **name**: The user name to display.
-- **password**: The hash assigned to this session to identify it in your server application.
+        Request POST Parameters
+        {
+            terminal: The "Terminal ID" defined in the Configuration window. 
+            user: The user ID that the server application has asigned to the users array.
+            password: The password inserted by the user.
+        }
+        JSON Response
+        {
+            id: The user ID that will be sent on each operation, in order to identify it in your server application.
+            name: The user name to display.
+            password: The hash assigned to this session to identify it in your server application.
+        }
 
 ### License
 [Apache License]
