@@ -34,7 +34,7 @@ Loads all the base elements, like the application users, the grants to the diffe
         Request POST Parameters
         {
             terminal: The "Terminal ID" defined in the Configuration window. 
-            user: The user ID that the server application has asigned to the users array. This parameter may be empty (when there has benn no login jet).
+            user: The user ID that the server application has asigned to the users array. This parameter may be empty (if there has been no login yet).
         }
         JSON Response
         {
