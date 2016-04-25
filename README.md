@@ -33,4 +33,4 @@ See [METHODS] file for more info.
 [//]: #
 
 [Apache License]: <http://www.apache.org/licenses/>
-[METHODS]: <https://github.com/firiazabal/firipos/blob/master/METHODS>
+[METHODS]: <https://github.com/firiazabal/firipos/blob/master/METHODS.md>
