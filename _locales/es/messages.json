@@ -1,0 +1,443 @@
+{
+  "ext_title": {
+    "message": "firiPOS",
+    "description": "manifest extension title"
+  },
+  "ext_description": {
+    "message": "POS application",
+    "description": "manifest extension description"
+  },
+  "print_ticket": {
+    "message": "Imprimir Ticket",
+    "description": "Main window bottom check to print ticket on pay"
+  },
+  "btn_completed_tickets": {
+    "message": "Tickets",
+    "description": "Main window top button to show reports tickets completed"
+  },
+  "btn_completed_tickets_alt": {
+    "message": "Tickets Pagados"
+  },
+  "btn_settings_alt": {
+    "message": "Configuración",
+    "description": "Main window top button to access settings window"
+  },
+  "btn_sales": {
+    "message": "Ventas",
+    "description": "Main window top button sales report"
+  },
+  "btn_sales_alt": {
+    "message": "Informe de ventas"
+  },
+  "btn_cash": {
+    "message": "Caja",
+    "description": "Main window top button Open/Close Cash"
+  },
+  "btn_cash_alt": {
+    "message": "Apertura/Cierre de Caja"
+  },
+  "btn_logout_alt": {
+    "message": "Apagar",
+    "description": "Main window top button exit application"
+  },
+  "customer_anonymous": {
+    "message": "Anónimo",
+    "description": "Default value when no customer is selected"
+  },
+  "tbl_sale_unit": {
+    "message": "U.",
+    "description": "Main window sale table unit column"
+  },
+  "tbl_sale_product": {
+    "message": "Artículo",
+    "description": "Main window sale table product column"
+  },
+  "tbl_sale_price": {
+    "message": "Precio",
+    "description": "Main window sale table price column"
+  },
+  "tbl_sale_discount": {
+    "message": "Dto.",
+    "description": "Main window sale table discount column"
+  },
+  "tbl_sale_amount": {
+    "message": "Importe",
+    "description": "Main window sale table amount column"
+  },
+  "tbl_sale_total": {
+    "message": "Total",
+    "description": "Main window sale table footer total"
+  },
+  "lbl_no_products": {
+    "message": "-- No se han encontrado productos --",
+    "description": "Main window products list. Comment when no data found"
+  },
+  "lbl_no_categories": {
+    "message": "-- No se han encontrado categorías --",
+    "description": "Main window categories list. Comment when no data found"
+  },
+  "btn_new": {
+    "message": "Nuevo",
+    "description": "Main window, main action buttons"
+  },
+  "btn_cancel": {
+    "message": "Cancelar",
+    "description": "Main window, main action buttons"
+  },
+  "btn_opened": {
+    "message": "Abiertos",
+    "description": "Main window, main action buttons"
+  },
+  "btn_drawer": {
+    "message": "Cajón",
+    "description": "Main window, main action buttons"
+  },
+  "btn_tpv_cash": {
+    "message": "Caja",
+    "description": "Main window, main action buttons"
+  },
+  "btn_back": {
+    "message": "Volver",
+    "description": "Main window, pay action buttons"
+  },
+  "btn_new_payment": {
+    "message": "Nuevo Pago",
+    "description": "Main window, pay action buttons"
+  },
+  "btn_print": {
+    "message": "Imprimir",
+    "description": "Main window, pay action buttons"
+  },
+  "btn_drawer_ticket": {
+    "message": "Cajón",
+    "description": "Main window, pay action buttons"
+  },
+  "btn_paid": {
+    "message": "Pagado",
+    "description": "Main window, pay action buttons"
+  },
+  "btn_completed_new": {
+    "message": "Nuevo",
+    "description": "Main window, completed sale action buttons"
+  },
+  "btn_completed_opened": {
+    "message": "Abiertos",
+    "description": "Main window, completed sale action buttons"
+  },
+  "btn_completed_print": {
+    "message": "Imprimir",
+    "description": "Main window, completed sale action buttons"
+  },
+  "btn_completed_drawer": {
+    "message": "Cajón",
+    "description": "Main window, completed sale action buttons"
+  },
+  "btn_completed_reopen": {
+    "message": "Reabrir",
+    "description": "Main window, completed sale action buttons"
+  },
+  "mdl_exit": {
+    "message": "<p>Va a salir de la aplicación.</p><p>¿Está seguro de querer continuar?</p>",
+    "description": "Modal exit application window"
+  },
+  "mdl_reopen": {
+    "message": "<p>Va a reabrir una venta ya procesada.</p><p>¿Está seguro de querer continuar?</p>",
+    "description": "Modal reopen window"
+  },
+  "mdl_delete_sale": {
+    "message": "<p>Va a eliminar el pedido actual.</p><p>¿Está seguro de querer continuar?</p>",
+    "description": "Modal delete sale window"
+  },
+  "mdl_btn_cancel": {
+    "message": "Cancelar",
+    "description": "Modal window Cancel button"
+  },
+  "mdl_btn_login": {
+    "message": "Login",
+    "description": "Modal window Login button"
+  },
+  "mdl_select_user": {
+    "message": "Seleccione un Usuario",
+    "description": "Modal select user window title"
+  },
+  "mdl_users": {
+    "message": "Usuarios",
+    "description": "Modal select user window, default text when no users found"
+  },
+  "mdl_settings_title": {
+    "message": "Configuración",
+    "description": "Modal settings window title"
+  },
+  "mdl_settings_terminal_id": {
+    "message": "ID Terminal",
+    "description": "Modal settings window label"
+  },
+  "mdl_settings_host": {
+    "message": "Servidor",
+    "description": "Modal settings window label"
+  },
+  "mdl_settings_skin": {
+    "message": "Tema",
+    "description": "Modal settings window label"
+  },
+  "mdl_settings_yellow": {
+    "message": "Amarillo",
+    "description": "Modal settings window label"
+  },
+  "mdl_settings_blue": {
+    "message": "Azúl",
+    "description": "Modal settings window label"
+  },
+  "mdl_settings_red": {
+    "message": "Rojo",
+    "description": "Modal settings window label"
+  },
+  "mdl_settings_green": {
+    "message": "Verde",
+    "description": "Modal settings window label"
+  },
+  "mdl_settings_purple": {
+    "message": "Violeta",
+    "description": "Modal settings window label"
+  },
+  "mdl_settings_direct_print": {
+    "message": "Impresión directa desde servidor",
+    "description": "Modal settings window label"
+  }, 
+  "mdl_settings_printer": {
+    "message": "Impresora",
+    "description": "Modal settings window label"
+  }, 
+  "mdl_settings_default_printer_text": {
+    "message": "-- Elija una impresora de Etiquetas --",
+    "description": "Modal settings window label"
+  },
+  "mdl_btn_save": {
+    "message": "Guardar",
+    "description": "Modal window Save button"
+  },
+  "mdl_btn_delete": {
+    "message": "Eliminar",
+    "description": "Modal window Delete button"
+  },
+  "mdl_opened_sales_title": {
+    "message": "Ventas Abiertas",
+    "description": "Modal Opened sales window title"
+  },
+  "mdl_opened_sales_documentno": {
+    "message": "#",
+    "description": "Modal opened sales window label"
+  },
+  "mdl_opened_sales_time": {
+    "message": "Hora",
+    "description": "Modal opened sales window label"
+  },
+  "mdl_opened_sales_employee": {
+    "message": "Empleado",
+    "description": "Modal opened sales window label"
+  },
+  "mdl_opened_sales_customer": {
+    "message": "Cliente",
+    "description": "Modal opened sales window label"
+  },
+  "mdl_opened_sales_lines": {
+    "message": "Líneas",
+    "description": "Modal opened sales window label"
+  },
+  "mdl_opened_sales_total": {
+    "message": "Total",
+    "description": "Modal opened sales window label"
+  },
+  "mdl_completed_sales_title": {
+    "message": "Tickets",
+    "description": "Modal Completed sales window title"
+  },
+  "mdl_completed_sales_documentno": {
+    "message": "#",
+    "description": "Modal Completed sales window label"
+  },
+  "mdl_completed_sales_time": {
+    "message": "Hora",
+    "description": "Modal Completed sales window label"
+  },
+  "mdl_completed_sales_employee": {
+    "message": "Empleado",
+    "description": "Modal Completed sales window label"
+  },
+  "mdl_completed_sales_customer": {
+    "message": "Cliente",
+    "description": "Modal Completed sales window label"
+  },
+  "mdl_completed_sales_lines": {
+    "message": "Líneas",
+    "description": "Modal Completed sales window label"
+  },
+  "mdl_completed_sales_total": {
+    "message": "Total",
+    "description": "Modal Completed sales window label"
+  },
+  "mdl_report_sales_title": {
+    "message": "Informe de Ventas",
+    "description": "Modal report sales window title"
+  },
+  "mdl_report_sales_startdate": {
+    "message": "Desde",
+    "description": "Modal report sales window label"
+  },
+  "mdl_report_sales_enddate": {
+    "message": "Hasta",
+    "description": "Modal report sales window label"
+  },
+  "mdl_report_sales_detail": {
+    "message": "Detalle",
+    "description": "Modal report sales window label"
+  },
+  "mdl_report_sales_cash": {
+    "message": "Caja",
+    "description": "Modal report sales window label"
+  },
+  "mdl_btn_print": {
+    "message": "Imprimir",
+    "description": "Modal window Print button"
+  },
+  "mdl_customers_title": {
+    "message": "Clientes",
+    "description": "Modal customers window title"
+  },
+  "mdl_line_title": {
+    "message": "Línea",
+    "description": "Modal line edit window title"
+  }, 
+  "mdl_line_quantity": {
+    "message": "Cantidad",
+    "description": "Modal line edit window label"
+  },
+  "mdl_line_price": {
+    "message": "Precio",
+    "description": "Modal line edit window label"
+  },
+  "mdl_line_discount": {
+    "message": "Descuento",
+    "description": "Modal line edit window label"
+  }, 
+  "mdl_cash_title": {
+    "message": "Caja",
+    "description": "Modal cash window title"
+  },
+  "mdl_cash_alert_title": {
+    "message": "Existen pedidos abiertos",
+    "description": "Modal cash window alert title"
+  },
+  "mdl_cash_alert_text": {
+    "message": "Los pedidos abiertos se eliminaran al Cerrar la Caja",
+    "description": "Modal cash window alert text."
+  }, 
+  "mdl_cash_total": {
+    "message": "Total",
+    "description": "Modal cash window label"
+  },
+  "mdl_cash_alert": {
+    "message": "Apertura de Caja. Debe indicar la cantidad inicial que deposita en la caja, para que se pueda contemplar cuando haga el cierre del día.<br/>Utilice la calculador o las monedas para indicar dicha cantidad y pulse el botón para Confirmar la apertura.",
+    "description": "Modal cash window alert"
+  },
+  "mdl_btn_confirm": {
+    "message": "Confirmar",
+    "description": "Modal window Confirm button"
+  },
+  "mdl_drawer_title": {
+    "message": "Movimientos en la caja",
+    "description": "Modal drawer window title"
+  },
+  "mdl_drawer_info_text": {
+    "message": "Seleccione un motivo para justificar un ingreso/cargo en la caja. Si no desea registrar el motivo, puede dejarlo en blanco y continuar, el cajón se abrirá sin registrar movimiento alguno.",
+    "description": "Modal drawer window info"
+  },
+  "mdl_drawer_reason": {
+    "message": "Motivo",
+    "description": "Modal drawer window label"
+  },
+  "mdl_drawer_customer": {
+    "message": "Cliente",
+    "description": "Modal drawer window label"
+  },
+  "mdl_drawer_employee": {
+    "message": "Empleado",
+    "description": "Modal drawer window label"
+  },
+  "mdl_btn_open_drawer": {
+    "message": "Abrir Cajón",
+    "description": "Modal window Open Drawer button"
+  },
+  "mdl_btn_open_cash": {
+    "message": "Abrir Caja",
+    "description": "Modal window Open Cash button"
+  },
+  "mdl_btn_close_cash": {
+    "message": "Cerrar Caja",
+    "description": "Modal window Close Cash button"
+  },
+  "user_unknown": {
+    "message": "Desconocido",
+    "description": "Value shown when no user has been logged"
+  },
+  "alert_store_disabled_title": {
+    "message": "Almacenamiento deshabilitado",
+    "description": "Alert message when the local storage is disabled"
+  },
+  "alert_store_disabled_text": {
+    "message": "El almacenamiento local no está activado.\nActívelo para que funcione correctamente la aplicación",
+    "description": "Alert message when the local storage is disabled"
+  },
+  "copyright": {
+    "message": "<strong>&copy; 2015 firiPOS</strong>",
+    "description": "Footer Copyright"
+  },
+  "select_one_operation_option": {
+    "message": "-- Seleccione una operación --",
+    "description": "Modal Drawer window. Default text when no reason is selected"
+  },
+  "select_one_employee_option": {
+    "message": "-- Seleccione un empleado --",
+    "description": "Modal Drawer window. Default text when no employee is selected"
+  },
+  "select_one_customer_option": {
+    "message": "-- Seleccione un cliente --",
+    "description": "Modal Drawer window. Default text when no customer is selected"
+  },
+  "bom_products_nothing": {
+    "message": "Ninguno",
+    "description": "Modal BOM product window. Text for no option selected"
+  },
+  "mdl_bom_title": {
+    "message": "Seleccione las opciones del menú",
+    "description": "Modal BOM product window title"
+  },
+  "cash_start": {
+    "message": "Apertura de Caja",
+    "description": "Modal Cash window label"
+  },
+  "cash_sales": {
+    "message": "Ventas",
+    "description": "Modal Cash window label"
+  },
+  "cash_total_sales": {
+    "message": "Total Caja",
+    "description": "Modal Cash window label"
+  },
+  "ajax_error_timeout": {
+    "message": "Tiempo de conexión agotado. Compruebe que tiene buena cobertura de red",
+    "description": "Ajax error"
+  },
+  "ajax_error_parser": {
+    "message": "Se ha producido un error al interpretar los datos",
+    "description": "Ajax error"
+  },
+  "ajax_error_abort": {
+    "message": "Conexión cancelada. Compruebe que el servidor está funcionando y que tiene conexión de red",
+    "description": "Ajax error"
+  },
+  "ajax_error_unknown": {
+    "message": "Se ha producido un error inexperado. Compruebe que están bien los parámetros de configuración y que tiene acceso a la red",
+    "description": "Ajax error"
+  }
+}

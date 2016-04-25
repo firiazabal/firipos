@@ -1,0 +1,114 @@
+/* scroll fixes */
+.modal-open .modal {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  overflow-y: auto;
+}
+
+.required:after {
+  content:"*";
+  color:red;
+}
+
+.sales .col-lg-1, .sales .col-lg-10, .sales .col-lg-11, .sales .col-lg-12, .sales .col-lg-2, .sales .col-lg-3, .sales .col-lg-4, .sales .col-lg-5, .sales .col-lg-6, .sales .col-lg-7, .sales .col-lg-8, .sales .col-lg-9, .sales .col-md-1, .sales .col-md-10, .sales .col-md-11, .sales .col-md-12, .sales .col-md-2, .sales .col-md-3, .sales .col-md-4, .sales .col-md-5, .sales .col-md-6, .sales .col-md-7, .sales .col-md-8, .sales .col-md-9, .sales .col-sm-1, .sales .col-sm-10, .sales .col-sm-11, .sales .col-sm-12, .sales .col-sm-2, .sales .col-sm-3, .sales .col-sm-4, .sales .col-sm-5, .sales .col-sm-6, .sales .col-sm-7, .sales .col-sm-8, .sales .col-sm-9, .sales .col-xs-1, .sales .col-xs-10, .sales .col-xs-11, .sales .col-xs-12, .sales .col-xs-2, .sales .col-xs-3, .sales .col-xs-4, .sales .col-xs-5, .sales .col-xs-6, .sales .col-xs-7, .sales .col-xs-8, .sales .col-xs-9 {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.sales .small-box {
+  margin-bottom: -1px;
+}
+
+.btn .badge {
+  position: absolute !important;
+  top: -5px !important;
+  right: 0px !important;
+}
+
+.btn-lg .title {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: relative;
+  display: block;
+}
+
+tr.odd {
+  background-color: #E7E7F7;
+}
+
+a.disabled {
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    box-shadow: none;
+    opacity: .65;
+}
+
+.sales .thumbnail {
+  padding: 0px;
+  margin: 0px;
+}
+
+.sales-grid .col-lg-1, .sales-grid .col-lg-10, .sales-grid .col-lg-11, .sales-grid .col-lg-12, .sales-grid .col-lg-2, .sales-grid .col-lg-3, .sales-grid .col-lg-4, .sales-grid .col-lg-5, .sales-grid .col-lg-6, .sales-grid .col-lg-7, .sales-grid .col-lg-8, .sales-grid .col-lg-9, .sales-grid .col-md-1, .sales-grid .col-md-10, .sales-grid .col-md-11, .sales-grid .col-md-12, .sales-grid .col-md-2, .sales-grid .col-md-3, .sales-grid .col-md-4, .sales-grid .col-md-5, .sales-grid .col-md-6, .sales-grid .col-md-7, .sales-grid .col-md-8, .sales-grid .col-md-9, .sales-grid .col-sm-1, .sales-grid .col-sm-10, .sales-grid .col-sm-11, .sales-grid .col-sm-12, .sales-grid .col-sm-2, .sales-grid .col-sm-3, .sales-grid .col-sm-4, .sales-grid .col-sm-5, .sales-grid .col-sm-6, .sales-grid .col-sm-7, .sales-grid .col-sm-8, .sales-grid .col-sm-9, .sales-grid .col-xs-1, .sales-grid .col-xs-10, .sales-grid .col-xs-11, .sales-grid .col-xs-12, .sales-grid .col-xs-2, .sales-grid .col-xs-3, .sales-grid .col-xs-4, .sales-grid .col-xs-5, .sales-grid .col-xs-6, .sales-grid .col-xs-7, .sales-grid .col-xs-8, .sales-grid .col-xs-9 {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.sales .box {
+  margin-bottom: 0px;
+}
+
+.sales .btn-calc {
+  /*width: 90px;
+  height: 60px;*/
+  width: 100%;
+  height: 60px;
+}
+
+.grid-horizontal {
+  height: 100%;
+  overflow: auto;
+  min-width: 100%;
+}
+
+.grid-horizontal .item {
+  position: relative;
+  float: left;
+}
+
+.profile-user-img {
+  width: 100%;
+  height: 133px;
+}
+
+.table-tr {
+  cursor: pointer;
+}
+
+.table-tr.active td {
+  background-color: #3c8dbc !important;
+  color: white;
+  font-weight: bold;
+}
+
+.payment-type-item.active {
+  background-color: #00a65a !important;
+  border-color: #008d4c !important;
+}
+
+.money .badge {
+  display: none;
+}
+
+.product-bom-item.active {
+  border-width: 5px;
+}
+
+.product-bom-item.active img {
+  height: 42px !important;
+}
+
+.modal-header .close {
+  margin-top: -2px;
+  margin-bottom: -10px;
+  font-size: 40px;
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/png" href="icon-16.png"/>
+  <link rel="icon" href="icon-16.png" sizes="16x16" type="image/png"/>
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-switch.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/adminlte/css/adminlte.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/adminlte/css/skins/_all-skins.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/adminlte/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  <script src="assets/js/jquery-1.11.3.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/bootstrap-switch.min.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/center-modals.js"></script>
+  <script src="assets/js/clock.js"></script>
+  <script src="assets/js/calculator.js"></script>
+  <script src="assets/js/money.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/messages.js"></script>
+  <script src="assets/js/resize.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/defaults.js"></script>
+  <script src="assets/js/remote-data-helper.js"></script>
+  <script src="assets/js/remote-data.js"></script>
+  <script src="assets/js/events.js"></script>
+  <script src="i18n.js"></script>
+  <script src="scripts.js"></script>
+  </head>
+  <body class="hold-transition skin-red fixed layout-top-nav">
+    <div class="wrapper" id="top-page">
+
+      <!-- Main Header -->
+      <header class="main-header">
+        <!-- Header Navbar -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Logo -->
+          <div class="logo" style="line-height: 47px;">
+            <span class="logo-lg"><img src="assets/img/logo.png" style="height: 45px; width: 100%;"/></span>
+          </div>
+          <p class="navbar-text" id="actual-time" style="font-size: 25px; margin-top: 9px; margin-bottom: 5px; color: white;">12:12:00</p>
+          <ul class="nav navbar-nav">
+            <li><a href="#" data-toggle="modal" data-target="#modal-settings" class="text-warning" id="settigns" title="Configuración"><i class="fa fa-gear"></i></a></li>
+          </ul>
+          <!-- Navbar Right Menu -->
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="#" class="text-warning disabled" id="tpv_completed_btn" title="Tickets pagados"><i class="fa fa-server"></i> <span id="i18nBtnReportCompletedTickets">Tickets</span></a>
+              </li>
+              <li>
+                <a href="#" class="text-warning disabled" id="sales-report" title="Informe de Ventas"><i class="fa fa-print"></i> <span id="i18nBtnReportSales">Ventas</span></a>
+              </li>
+              <li>
+                <a href="#" class="text-warning disabled" id="cash" title="Apertura/Cierre de Caja"><i class="fa fa-euro"></i> <span id="i18nBtnCash">Caja</span></a>
+              </li>
+              <!-- User Account Menu -->
+              <li class="dropdown user user-menu notifications-menu">
+                <!-- Menu Toggle Button -->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <!-- The user image in the navbar-->
+									<!-- hidden-xs hides the username on small devices so only the image appears. -->
+                  <span class="hidden-xs" id="security_user">Admin </span><span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <ul class="menu" id="select-users">
+										</ul>
+                  </li>
+                </ul>
+              </li>
+							<li>
+								<a href="#" data-toggle="modal" data-target="#modal-alert" class="text-danger" id="logout" title="Apagar"><i class="fa fa-power-off"></i></a>
+							</li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <form>
+      <input type="hidden" name="sale_id" id="sale_id" value="" />
+      <input type="hidden" name="customer_id" id="customer_id" value="" />
+      </form>
+			
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper clearfix">
+        <!-- Main content -->
+        <section class="content" id="content-body">
+          <!-- Your Page Content Here -->
+					<div class="content-fluid">
+            <div class="col-sm-6">
+              <div class="row sales">
+                <div class="col-sm-12">
+                  <div class="box box-danger box-wrapper-half box-solid" id="lines-box">
+                    <div class="box-header with-border">
+                      <h3 class="box-title text-nowrap" style="width: 77%; overflow: hidden; text-overflow: ellipsis; line-height: normal;"><a href="#" class="disabled"><i class="fa fa-user-plus"></i></a> <a href="#" data-toggle="modal" data-target="#modal-customer"><span id="sale_customer">Anónimo</span></a></h3>
+                      <div class="box-tools pull-right text-right" style="top: 0px;">
+                        <strong id="sale_documentno"></strong><br/><span id="sale_time"></span>
+                      </div>
+                    </div>
+                    <div class="box-body table-responsive no-padding" id="lines_div">
+                      <table class="table table-bordered table-condensed">
+                        <thead>
+                        <tr>
+                          <th id="i18nLblUnit">U.</th>
+                          <th id="i18nLblProduct">Artículo</th>
+                          <th id="i18nLblPrice" class="text-right">Precio</th>
+                          <th id="i18nLblDiscount" class="text-right">Dto.</th>
+                          <th id="i18nLblAmount" class="text-right">Importe</th>
+                        </tr>
+                        </thead>
+                        <tbody id="lines">
+                        </tbody>
+                      </table>
+                    </div><!-- /.box-body -->
+                    <div class="box-footer" style="font-size: 16px; font-weight: bold; margin-bottom: 0px; padding-bottom: 0px;">
+                      <p class="text-warning text-uppercase pull-left" id="i18nLblTotal">TOTAL</p><p class="text-warning pull-right"><span id="lines_total_prefix">€</span><span id="lines_total">0.00</span><span id="lines_total_suffix">€</span></p>
+                    </div><!-- /.box-footer-->
+                  </div><!-- /.box -->
+                </div><!-- /.col -->
+              </div><!-- /.row -->
+              <div class="row sales">
+                <div class="col-sm-12">
+                  <div class="box box-wrapper-half">
+                    <div class="box-body sales-grid" id="products">
+                      <span id="i18nLblNoProducts" class="text-uppercase">-- NO HAY PRODUCTOS --</span>
+                    </div><!-- /.box-body -->
+                    <div class="box-body" id="payment-types" style="display: none;">
+                      
+                    </div><!-- /.box-body -->
+                  </div><!-- /.box -->
+                </div><!-- /.col-xs-12 -->
+              </div><!-- /.row -->
+            </div><!-- /.col-sm-6 -->
+
+
+            <div class="col-sm-6">
+              <div class="row sales">
+                <div class="col-sm-12">
+                  <div class="box box-wrapper">
+                    <div class="box-body sales-grid">
+                      <div class="container-fluid categories" style="overflow: auto;" id="categories">
+                        <div class="row">
+                          <span id="i18nLblNoCategories" class="text-uppercase">-- NO HAY CATEGORIAS --</span>
+                        </div><!-- /.row -->
+                      </div>
+                      <div class="container-fluid categories" style="overflow: auto; display: none;" id="payment">
+                        <div class="row">
+                          <div class="col-xs-12" style="height: 80px; background-color: black; color: white; font-size: 24px; padding: 24px; position: relative;">
+                            <span id="pendingqty">0</span>
+                            <ul style="font-size: 16px; list-style-image: none; list-style-type: none; position: absolute; top: 5px; right: 5px; bottom: 5px; overflow: auto; width: 250px;" id="payments-list">
+                              <li><a href="#" class="text-red"><i class="fa fa-close"></i></a> 20.00€ Efectivo</li>
+                              <li><a href="#" class="text-red"><i class="fa fa-close"></i></a> 20.00€ Tarjeta</li>
+                              <li><a href="#" class="text-red"><i class="fa fa-close"></i></a> 20.00€ Tarjeta</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="container-fluid money" id="payment-money">
+                          
+                        </div><!-- /#payment-money -->
+                      </div>
+                      <div class="container-fluid calculator" style="height: 291px; overflow: auto; padding-top: 5px;">
+                        <div class="row">
+                          <div class="col-sm-4" id="btn-ticket">
+                            <button type="button" class="btn btn-primary btn-lg btn-block text-uppercase" id="tpv_new_btn"><i class="fa fa-asterisk"></i> <span id="i18nBtnNew">Nuevo</span></button>
+                            <button type="button" class="btn btn-danger btn-lg btn-block text-uppercase" id="tpv_cancel_btn"><i class="fa fa-trash"></i> <span id="i18nBtnCancel">Cancelar</span></button>
+                            <button type="button" class="btn btn-warning btn-lg btn-block text-uppercase" id="tpv_opened_btn"><i class="fa fa-tags"></i> <span id="i18nBtnOpened">Abiertos</span></button>
+                            <button type="button" class="btn btn-info btn-lg btn-block text-uppercase" id="tpv_drawer_btn"><i class="fa fa-optin-monster"></i> <span id="i18nBtnDrawer">Cajón</span></button>
+                            <button type="button" class="btn btn-success btn-lg btn-block text-uppercase" style="height: 80px;" id="tpv_cash_btn"><i class="fa fa-money"></i> <span id="i18nBtnTpvCash">Caja</span></button>
+                          </div><!-- /.col-sm-4 -->
+                          <div class="col-sm-4" id="btn-payment" style="display: none;">
+                            <button type="button" class="btn btn-primary btn-lg btn-block text-uppercase" id="tpv_back_btn"><i class="fa fa-chevron-left"></i> <span id="i18nBtnBack">Volver</span></button>
+                            <button type="button" class="btn btn-info btn-lg btn-block text-uppercase" style="padding-left: 6px;" id="tpv_add_payment_btn"><i class="fa fa-plus"></i> <span id="i18nBtnNewPayment">Nuevo Pago</span></button>
+                            <button type="button" class="btn btn-warning btn-lg btn-block text-uppercase" id="tpv_print_btn"><i class="fa fa-print"></i> <span id="i18nBtnPrint">Imprimir</span></button>
+                            <button type="button" class="btn btn-info btn-lg btn-block text-uppercase" id="tpv_drawer_ticket_btn"><i class="fa fa-optin-monster"></i> <span id="i18nBtnDrawerTicket">Cajón</span></button>
+                            <button type="button" class="btn btn-success btn-lg btn-block text-uppercase" style="height: 80px;" id="tpv_paid_btn"><i class="fa fa-money"></i> <span id="i18nBtnPaid">Pagado</span></button>
+                          </div><!-- /.col-sm-4 -->
+                          <div class="col-sm-4" id="btn-completed" style="display: none;">
+                            <button type="button" class="btn btn-primary btn-lg btn-block text-uppercase" id="tpv_completed_new_btn"><i class="fa fa-asterisk"></i> <span id="i18nBtnCompletedNew">Nuevo</span></button>
+                            <button type="button" class="btn btn-warning btn-lg btn-block text-uppercase" id="tpv_completed_opened_btn"><i class="fa fa-tags"></i> <span id="i18nBtnCompletedOpened">Abiertos</span></button>
+                            <button type="button" class="btn btn-warning btn-lg btn-block text-uppercase" id="tpv_completed_print_btn"><i class="fa fa-print"></i> <span id="i18nBtnCompletedPrint">Imprimir</span></button>
+                            <button type="button" class="btn btn-info btn-lg btn-block text-uppercase" id="tpv_completed_drawer_ticket_btn"><i class="fa fa-optin-monster"></i> <span id="i18nBtnCompletedDrawer">Cajón</span></button>
+                            <button type="button" class="btn btn-danger btn-lg btn-block text-uppercase" style="height: 80px;" data-toggle="modal" data-target="#modal-confirm-reopen"><i class="fa fa-money"></i> <span id="i18nBtnCompletedReopen">Reabrir</span></button>
+                          </div><!-- /.col-sm-4 -->
+                          <div class="col-sm-8" style="padding-left: 10px; padding-right: 10px;">
+                            <div class="container-fluid" id="calculator_total">
+                            </div>
+                          </div><!-- /.col-sm-8 -->
+                        </div><!-- /.row -->
+                      </div>
+                    </div><!-- /.box-body -->
+                  </div><!-- /.box -->
+                </div><!-- /.col-xs-12 -->
+              </div><!-- /.row -->
+            </div><!-- /.col-sm-7 -->
+
+
+          </div><!-- /.content-fluid -->
+
+        </section><!-- /.content -->
+      </div><!-- /.content-wrapper -->
+
+      <!-- Main Footer -->
+      <footer class="main-footer">
+        <!-- To the right -->
+        <div class="pull-right" style="margin-top: -10px;">
+          <label class="label-control" for="ticket-print"><span id="i18nPrintTicket">Imprimir Ticket</span> <input type="checkbox" value="1" name="ticket-print" id="ticket-print"/></label>
+        </div>
+        <!-- Default to the left -->
+        <span id="i18nCopyright"><strong>Copyright &copy; 2015 firiPOS.</strong> All rights reserved.</span>
+      </footer>
+    </div><!-- ./wrapper -->
+    <webview src="" style="display: none; width: 100%; height: 100%;" id="printer-webview"></webview>
+
+  </body>
+</html>
