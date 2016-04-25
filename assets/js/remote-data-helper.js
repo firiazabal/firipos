@@ -194,7 +194,7 @@ function _buildProductsBOMControls(host, productId, boms) {
 
     for (var j = 0; j < boms[i].products.length; j++) {
       container += '<div class="col-sm-2 item">';
-      container += '	<a href="#" data-id="' + boms[i].products[j].id + '" data-name="' + boms[i].products[j].name + '" data-next="' + next + '" data-actual="' + actual + '" data-section="' + boms[i].products[j].section + '" class="thumbnail product-bom-item">';
+      container += '	<a href="#" data-id="' + boms[i].products[j].id + '" data-name="' + boms[i].products[j].name + '" data-next="' + next + '" data-actual="' + actual + '" data-section="' + boms[i].id + '" class="thumbnail product-bom-item">';
       container += '		<img src="assets/img/no-photo-grid.png" style="width: 100%; height: 50px;" alt="' + boms[i].products[j].name + '" id="image-products-' + productId + '-section-' + i + '-bom-' + boms[i].products[j].id + '">';
       container += '		<p class="text-nowrap" style="overflow: hidden; text-overflow: ellipsis; width: 100%; margin: 0px;">' + boms[i].products[j].name + '</p>';
       container += '	</a>';
