@@ -163,8 +163,8 @@ function completedSalesClick(e) {
       setInputDate('modal-ticket-date');
       date = $('#modal-ticket-date').val();
     }
+    loadCompletedSalesList(date);
   }
-  loadCompletedSalesList(date);
   e.preventDefault(); // prevents default
   return false;
 }
