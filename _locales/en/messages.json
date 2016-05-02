@@ -204,6 +204,10 @@
     "message": "Direct printing from server",
     "description": "Modal settings window label"
   }, 
+  "mdl_settings_logo": {
+    "message": "Logo",
+    "description": "Modal settings window label"
+  }, 
   "mdl_settings_printer": {
     "message": "Printer",
     "description": "Modal settings window label"

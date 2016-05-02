@@ -1,3 +1,23 @@
+function onclickChooseLogo(e) {
+  chrome.fileSystem.chooseEntry({type: 'openFile'}, function(readOnlyEntry) {
+
+    readOnlyEntry.file(function(file) {
+      var reader = new FileReader();
+
+      //reader.onerror = errorHandler;
+      reader.onloadend = function(e) {
+        settingslogoImg = e.target.result;
+      };
+      $('#logo_src').val(file.name);
+      settingslogoMime = file.type;
+      //reader.readAsBinaryString(file);
+      reader.readAsDataURL(file);
+    });
+    e.preventDefault();
+    return false;
+	});
+}
+
 function onclickPaymentType(e) {
   var iscustomer = $(this).data('customer');
   if (iscustomer == '1') {
@@ -481,6 +501,9 @@ function settingsClick(e) {
   store.set('settings_host', $('#host_ip').val());
   store.set('settings_printer', $('#printer').val());
   store.set('settings_skin', $('#skin').val());
+  store.set('settings_logo', $('#logo_src').val());
+  store.set('settings_logo_img', settingslogoImg);
+  store.set('settings_logo_mime', settingslogoMime);
   store.set('settings_direct_print', (($('#direct_print').prop('checked'))?'1':'0'));
   loadActualTerminalInfo();
   $('#modal-settings').modal('hide');

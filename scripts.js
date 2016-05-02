@@ -3,6 +3,9 @@ var gUserName=chrome.i18n.getMessage("user_unknown");
 var gUserPassword = '';
 var gHostIP = '';
 var gTerminalID = '';
+var gLogo = '';
+var gLogoName = '';
+var gLogoMime = '';
 var gDirectPrint = false;
 var gSkin = 'skin-red';
 var gCurrency = '&euro;';
@@ -36,6 +39,9 @@ var gOperations = new Array();
 var gCashID = null;
 var gCashTotal = 0;
 
+var settingslogoImg = null;
+var settingslogoMime = null;
+
 $(document).ready(function(){
   buildModalWindows();
   loadStoredInfo();
@@ -67,6 +73,10 @@ $(document).ready(function(){
     store.get('settings_skin', function(val){
       if (!val || val == null || val == '') $('#skin').val('skin-red');
       else $('#skin').val(val);
+    });
+    store.get('settings_logo', function(val){
+      if (!val || val == null || val == '') $('#logo_src').val('');
+      else $('#logo_src').val(val);
     });
     store.get('settings_direct_print', function(val){
       if (!val || val == null || val == '') {
@@ -137,6 +147,11 @@ function buildModalWindows() {
           '</div>' + 
           '<div class="form-group">' +
           '  <label class="label-control" for="direct_print"> <span id="i18nDirectPrint">' + chrome.i18n.getMessage("mdl_settings_direct_print") + '</span> <input type="checkbox" value="1" name="direct_print" id="direct_print"/></label>' +
+          '</div>' + 
+          '<div class="form-group">' + 
+          '  <label for="logo_src">' + chrome.i18n.getMessage("mdl_settings_logo") + '</label>' + 
+          '  <input type="text" name="logo_src" id="logo_src" class="form-control disabled" disabled/> <button id="btnSelectLogo" class="btn"><i class="fa fa-bank"></i></button>' + 
+          '  <input type="file" name="logo_src_h" id="logo_src_h" class="" style="display: none;"/>' + 
           '</div>' + 
           '<div class="form-group">' + 
           '  <label for="printer" class="required">' + chrome.i18n.getMessage("mdl_settings_printer") + '</label>' + 
@@ -361,6 +376,25 @@ function loadActualTerminalInfo() {
     updateSkin();
   });
   gLockedStore++;
+  store.get('settings_logo', function(val){
+    if (!val || val == null || val == '') gLogoName = '';
+    else gLogoName = val;
+    gLockedStore--;
+  });
+  gLockedStore++;
+  store.get('settings_logo_mime', function(val){
+    if (!val || val == null || val == '') gLogoMime = '';
+    else gLogoMime = val;
+    gLockedStore--;
+  });
+  gLockedStore++;
+  store.get('settings_logo_img', function(val){
+    if (!val || val == null || val == '') gLogo = '';
+    else gLogo = val;
+    gLockedStore--;
+    updateLogo();
+  });
+  gLockedStore++;
   store.get('settings_direct_print', function(val){
     if (!val || val == null || val == '') gDirectPrint = false;
     else gDirectPrint = (val=='1');
@@ -369,7 +403,7 @@ function loadActualTerminalInfo() {
 }
 
 function updateSkin() {
-  if (gSkin == null)
+  if (gSkin == null || gSkin == '')
     gSkin = 'skin-red';
   var classes = $(document.body).attr('class');
   var arrClasses = classes.split(' ');
@@ -406,6 +440,13 @@ function updateSkin() {
   }
 }
 
+function updateLogo() {
+  if (gLogo != null && gLogo != '') {
+    $('#app-logo').attr('src', gLogo);
+  }
+  $('#app-logo').show();
+}
+
 function buildExtraControls() {
   new Clock($('#actual-time')).start();
   new Calculator('qty', $('#calculator_total'), 'text', '0', 'disabled', 'payment-money');
@@ -424,6 +465,7 @@ function bindButtons() {
   $('#printer-webview').on('loadstop', function(){
     $(this)[0].print();
   });
+  $('#btnSelectLogo').on('click', onclickChooseLogo);
   $('#payment-money .money').on('click', function(e){
     updatePendingQty();
     e.preventDefault();
