@@ -157,10 +157,12 @@ function newSaleClick(e) {
 }
 
 function completedSalesClick(e) {
-  var date = $('#modal-ticket-date').val();
-  if (date == null || date.length == 0) {
-    setInputDate('modal-ticket-date');
-    date = $('#modal-ticket-date').val();
+  if (gRerportGranted) {
+    var date = $('#modal-ticket-date').val();
+    if (date == null || date.length == 0) {
+      setInputDate('modal-ticket-date');
+      date = $('#modal-ticket-date').val();
+    }
   }
   loadCompletedSalesList(date);
   e.preventDefault(); // prevents default

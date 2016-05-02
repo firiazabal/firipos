@@ -150,8 +150,11 @@ function buildModalWindows() {
           '</div>' + 
           '<div class="form-group">' + 
           '  <label for="logo_src">' + chrome.i18n.getMessage("mdl_settings_logo") + '</label>' + 
-          '  <input type="text" name="logo_src" id="logo_src" class="form-control disabled" disabled/> <button id="btnSelectLogo" class="btn"><i class="fa fa-bank"></i></button>' + 
-          '  <input type="file" name="logo_src_h" id="logo_src_h" class="" style="display: none;"/>' + 
+          '  <div class="form-inline">' + 
+          '    <div class="input-group" style="width: 100%;">' + 
+          '      <input type="text" name="logo_src" id="logo_src" class="form-control disabled" disabled/> <div class="input-group-addon" style="padding: 0px !important;"><button id="btnSelectLogo" class="btn btn-block"><i class="fa  fa-folder-open"></i></button></div>' + 
+          '    </div>' + 
+          '  </div>' + 
           '</div>' + 
           '<div class="form-group">' + 
           '  <label for="printer" class="required">' + chrome.i18n.getMessage("mdl_settings_printer") + '</label>' + 
