@@ -102,7 +102,7 @@ function buildModalWindows() {
   modalWindow.confirm('modal-alert', null, chrome.i18n.getMessage("mdl_exit"));
   modalWindow.confirm('modal-confirm-reopen', null, chrome.i18n.getMessage("mdl_reopen"));
   modalWindow.confirmDanger('modal-alert-delete', null, chrome.i18n.getMessage("mdl_delete_sale"));
-  modalWindow.general_sm('modal-login', 'Login', '<div class="container-fluid sales-grid" id="calculator-password"></div>', true, 
+  modalWindow.general_sm('modal-login', 'Login', '<input type="hidden" name="userLoginIdLogin" id="userLoginIdLogin" value=""/><div class="container-fluid sales-grid" id="calculator-password"></div>', true, 
     ['<button type="button" class="btn btn-default btn-lg pull-left" data-dismiss="modal">' + chrome.i18n.getMessage("mdl_btn_cancel") + '</button>', 
      '<button type="submit" class="btn btn-primary btn-lg pull-right" id="btnLogin">' + chrome.i18n.getMessage("mdl_btn_login") + '</button>']);
   modalWindow.general_full('modal-users', '', '<div class="container-fluid sales"><div class="col-sm-4 sales-grid"><h4 class="modal-title" id="usernameUsers">' + chrome.i18n.getMessage("mdl_select_user") + '</h4>' + 
