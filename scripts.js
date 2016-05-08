@@ -11,6 +11,7 @@ var gSkin = 'skin-red';
 var gCurrency = '&euro;';
 var gCurrencyPos = 1; //0-Before, 1-After
 var gLockedStore = 0;
+var gWaitForSaleHeader = false;
 
 var gSelectedCategory = null;
 var gItemWidth = null;

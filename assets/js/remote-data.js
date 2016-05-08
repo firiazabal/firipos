@@ -365,6 +365,14 @@ function getCashFlowInfo() {
 
 function addProductLine(id, quantity) {
   var host = getHostUrl();
+  var sale = $('#sale_id').val();
+  if (sale == null || sale.length == 0) {
+    if (gWaitForSaleHeader) {
+      return setTimeout(function () {addProductLine(id, quantity);}, 500);
+    } else {
+      gWaitForSaleHeader = true;
+    }
+  }
   if (host != null && host.length > 0) {
     $.ajax({
         url: host + "pointofsale/add_line",
@@ -373,9 +381,11 @@ function addProductLine(id, quantity) {
         success: function (data) {
           if (data != null) {
             if (data.error_message && data.error_message.length > 0) {
+              gWaitForSaleHeader = false;
               messages.alert(data.error_message);
             } else {
               _buildSaleLineControls(data, false);
+              gWaitForSaleHeader = false;
             }
           }
         },
@@ -388,13 +398,24 @@ function addProductLine(id, quantity) {
             sale_id: $('#sale_id').val(),
             customer_id: $('#customer_id').val()
           },
-        error: parseAjaxError
+        error: function (jqXHR, status, errMsg) {
+              gWaitForSaleHeader = false;
+              parseAjaxError(jqXHR, status, errMsg);
+            }
     });
   }
 }
 
 function addProductBOMLine(products, quantity) {
   var host = getHostUrl();
+  var sale = $('#sale_id').val();
+  if (sale == null || sale.length == 0) {
+    if (gWaitForSaleHeader) {
+      return setTimeout(function () {addProductBOMLine(products, quantity);}, 500);
+    } else {
+      gWaitForSaleHeader = true;
+    }
+  }
   if (host != null && host.length > 0) {
     $.ajax({
         url: host + "pointofsale/add_line_bom",
@@ -404,9 +425,11 @@ function addProductBOMLine(products, quantity) {
           $('#modal-bom-' + gProductsBomID).modal('hide');
           if (data != null) {
             if (data.error_message && data.error_message.length > 0) {
+              gWaitForSaleHeader = false;
               messages.alert(data.error_message);
             } else {
               _buildSaleLineControls(data, true);
+              gWaitForSaleHeader = false;
             }
           }
         },
@@ -420,7 +443,10 @@ function addProductBOMLine(products, quantity) {
             sale_id: $('#sale_id').val(),
             customer_id: $('#customer_id').val()
           },
-        error: parseAjaxError
+        error: function (jqXHR, status, errMsg) {
+              gWaitForSaleHeader = false;
+              parseAjaxError(jqXHR, status, errMsg);
+            }
     });
   }
 }
