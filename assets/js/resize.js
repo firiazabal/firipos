@@ -64,6 +64,9 @@ function fixGridHorizontal(id, cols) {
     //$(this).css('height', (gItemHeight-5) + "px");
   });
   grid.find('.item img').each(function(){
-    $(this).css('height', (gItemHeight - 22) + "px");
+    var extra = 0;
+    if (cols > 4)
+      extra = 5;
+    $(this).css('height', (gItemHeight - extra - 22) + "px");
   });
 }
