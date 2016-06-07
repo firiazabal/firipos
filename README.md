@@ -23,6 +23,7 @@ The first thing you must do, in order to setup the application is to fill the co
 - **Host**: The uri to the server application. This is the base url to connect with your server application and is where must be implemented all the required methods to interact with firiPOS.
 - **Skin**: Choose the color you prefer to your firiPOS installation.
 - **Direct printing from server**: If you choose **YES**, then the reports will be printed by the server application directly to the printer (via CUPS or a SMB sistem or just direct port writing...).
+- **Logo**: This parameter let you change the application logo.
 - **Printer**: Unimplemented
 
 Once you have configured the parameters and you are sure that your server application is running, then you have to restart firiPOS to load with the new parameters.
