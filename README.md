@@ -24,6 +24,8 @@ The first thing you must do, in order to setup the application is to fill the co
 - **Skin**: Choose the color you prefer to your firiPOS installation.
 - **Direct printing from server**: If you choose **YES**, then the reports will be printed by the server application directly to the printer (via CUPS or a SMB sistem or just direct port writing...).
 - **Logo**: This parameter let you change the application logo.
+- **Products Rows**: This parameter sets the number of rows in the products section (The left-bottom section, under the ticket list).
+- **Products Visible Cols**: This parameter sets the number of visible columns in the products section.
 - **Printer**: Unimplemented
 
 Once you have configured the parameters and you are sure that your server application is running, then you have to restart firiPOS to load with the new parameters.
