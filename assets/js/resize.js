@@ -53,9 +53,9 @@ function fixGridHorizontal(id, cols) {
   var grid = $('#' + id);
   if (gItemWidth == null || gItemHeight == null) {
     var selected = $('#category_' + gSelectedCategory);
-    gItemHeight = parseInt(selected.height()/4);
+    gItemHeight = parseInt(selected.height()/gProductsRows);
     var item = selected.find('.item').first();
-    item.css('width', '25%');
+    item.css('width', roundNumber(100/gProductsCols) + '%');
     gItemWidth = item.width();
   }
   grid.css("width", (((gItemWidth + 2) * cols) + 1) + "px");
@@ -65,8 +65,8 @@ function fixGridHorizontal(id, cols) {
   });
   grid.find('.item img').each(function(){
     var extra = 0;
-    if (cols > 4)
-      extra = 5;
+    if (cols > gProductsCols)
+      extra = 8;
     $(this).css('height', (gItemHeight - extra - 22) + "px");
   });
 }

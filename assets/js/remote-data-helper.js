@@ -106,8 +106,9 @@ function _buildCategoriesControls(host, data) {
 }
 
 function _buildProductsControls(host, categoryID, products, active) {
-  var rowsize = 4;
+  var rowsize = gProductsRows;
   var itemsize = 110;
+  var colsize = (12 / gProductsCols);
 
   var row = 0;
   var maxitems = 0;
@@ -124,7 +125,7 @@ function _buildProductsControls(host, categoryID, products, active) {
       _buildProductsBOMControls(host, products[i].id, products[i].boms);
     }
 
-    line = '<div class="col-sm-3 item">';
+    line = '<div class="col-sm-' + colsize + ' item">';
     line += '	<a href="#" data-id="' + products[i].id + '" data-name="' + products[i].name + '" data-price="' + products[i].sales_price + '" data-bom="' + ((products[i].boms)?'1':'0') + '" class="thumbnail product-item">';
     line += '		<img src="assets/img/no-photo-grid.png" style="width: 100%; height: 50px;" alt="' + products[i].name + '" id="image-products-' + products[i].id + '">';
     line += '		<p class="text-nowrap" style="overflow: hidden; text-overflow: ellipsis; width: 100%; margin: 0px;">' + products[i].name + '</p>';

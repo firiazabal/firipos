@@ -212,6 +212,14 @@
     "message": "Impresora",
     "description": "Modal settings window label"
   }, 
+  "mdl_settings_products_rows": {
+    "message": "Filas Productos (Requiere reiniciar aplicación)",
+    "description": "Modal settings window label"
+  }, 
+  "mdl_settings_products_cols": {
+    "message": "Columnas visibles Productos (Requiere reiniciar aplicación)",
+    "description": "Modal settings window label"
+  }, 
   "mdl_settings_default_printer_text": {
     "message": "-- Elija una impresora de Etiquetas --",
     "description": "Modal settings window label"

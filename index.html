@@ -155,7 +155,7 @@
                       </div>
                       <div class="container-fluid categories" style="overflow: auto; display: none;" id="payment">
                         <div class="row">
-                          <div class="col-xs-12" style="height: 80px; background-color: black; color: white; font-size: 24px; padding: 24px; position: relative;">
+                          <div class="col-xs-12" id="payment-board">
                             <span id="pendingqty">0</span>
                             <ul style="font-size: 16px; list-style-image: none; list-style-type: none; position: absolute; top: 5px; right: 5px; bottom: 5px; overflow: auto; width: 250px;" id="payments-list">
                               <li><a href="#" class="text-red"><i class="fa fa-close"></i></a> 20.00€ Efectivo</li>
@@ -168,28 +168,28 @@
                           
                         </div><!-- /#payment-money -->
                       </div>
-                      <div class="container-fluid calculator" style="height: 291px; overflow: auto; padding-top: 5px;">
+                      <div class="container-fluid calculator" id="action-keys">
                         <div class="row">
                           <div class="col-sm-4" id="btn-ticket">
                             <button type="button" class="btn btn-primary btn-lg btn-block text-uppercase" id="tpv_new_btn"><i class="fa fa-asterisk"></i> <span id="i18nBtnNew">Nuevo</span></button>
                             <button type="button" class="btn btn-danger btn-lg btn-block text-uppercase" id="tpv_cancel_btn"><i class="fa fa-trash"></i> <span id="i18nBtnCancel">Cancelar</span></button>
                             <button type="button" class="btn btn-warning btn-lg btn-block text-uppercase" id="tpv_opened_btn"><i class="fa fa-tags"></i> <span id="i18nBtnOpened">Abiertos</span></button>
                             <button type="button" class="btn btn-info btn-lg btn-block text-uppercase" id="tpv_drawer_btn"><i class="fa fa-optin-monster"></i> <span id="i18nBtnDrawer">Cajón</span></button>
-                            <button type="button" class="btn btn-success btn-lg btn-block text-uppercase" style="height: 80px;" id="tpv_cash_btn"><i class="fa fa-money"></i> <span id="i18nBtnTpvCash">Caja</span></button>
+                            <button type="button" class="btn btn-success btn-lg btn-block text-uppercase btn-2x" id="tpv_cash_btn"><i class="fa fa-money"></i> <span id="i18nBtnTpvCash">Caja</span></button>
                           </div><!-- /.col-sm-4 -->
                           <div class="col-sm-4" id="btn-payment" style="display: none;">
                             <button type="button" class="btn btn-primary btn-lg btn-block text-uppercase" id="tpv_back_btn"><i class="fa fa-chevron-left"></i> <span id="i18nBtnBack">Volver</span></button>
                             <button type="button" class="btn btn-info btn-lg btn-block text-uppercase" style="padding-left: 6px;" id="tpv_add_payment_btn"><i class="fa fa-plus"></i> <span id="i18nBtnNewPayment">Nuevo Pago</span></button>
                             <button type="button" class="btn btn-warning btn-lg btn-block text-uppercase" id="tpv_print_btn"><i class="fa fa-print"></i> <span id="i18nBtnPrint">Imprimir</span></button>
                             <button type="button" class="btn btn-info btn-lg btn-block text-uppercase" id="tpv_drawer_ticket_btn"><i class="fa fa-optin-monster"></i> <span id="i18nBtnDrawerTicket">Cajón</span></button>
-                            <button type="button" class="btn btn-success btn-lg btn-block text-uppercase" style="height: 80px;" id="tpv_paid_btn"><i class="fa fa-money"></i> <span id="i18nBtnPaid">Pagado</span></button>
+                            <button type="button" class="btn btn-success btn-lg btn-block text-uppercase btn-2x" id="tpv_paid_btn"><i class="fa fa-money"></i> <span id="i18nBtnPaid">Pagado</span></button>
                           </div><!-- /.col-sm-4 -->
                           <div class="col-sm-4" id="btn-completed" style="display: none;">
                             <button type="button" class="btn btn-primary btn-lg btn-block text-uppercase" id="tpv_completed_new_btn"><i class="fa fa-asterisk"></i> <span id="i18nBtnCompletedNew">Nuevo</span></button>
                             <button type="button" class="btn btn-warning btn-lg btn-block text-uppercase" id="tpv_completed_opened_btn"><i class="fa fa-tags"></i> <span id="i18nBtnCompletedOpened">Abiertos</span></button>
                             <button type="button" class="btn btn-warning btn-lg btn-block text-uppercase" id="tpv_completed_print_btn"><i class="fa fa-print"></i> <span id="i18nBtnCompletedPrint">Imprimir</span></button>
                             <button type="button" class="btn btn-info btn-lg btn-block text-uppercase" id="tpv_completed_drawer_ticket_btn"><i class="fa fa-optin-monster"></i> <span id="i18nBtnCompletedDrawer">Cajón</span></button>
-                            <button type="button" class="btn btn-danger btn-lg btn-block text-uppercase" style="height: 80px;" data-toggle="modal" data-target="#modal-confirm-reopen"><i class="fa fa-money"></i> <span id="i18nBtnCompletedReopen">Reabrir</span></button>
+                            <button type="button" class="btn btn-danger btn-lg btn-block text-uppercase btn-2x" data-toggle="modal" data-target="#modal-confirm-reopen"><i class="fa fa-money"></i> <span id="i18nBtnCompletedReopen">Reabrir</span></button>
                           </div><!-- /.col-sm-4 -->
                           <div class="col-sm-8" style="padding-left: 10px; padding-right: 10px;">
                             <div class="container-fluid" id="calculator_total">

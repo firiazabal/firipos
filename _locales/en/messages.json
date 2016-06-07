@@ -212,6 +212,14 @@
     "message": "Printer",
     "description": "Modal settings window label"
   }, 
+  "mdl_settings_products_rows": {
+    "message": "Products Rows (Application restart required)",
+    "description": "Modal settings window label"
+  }, 
+  "mdl_settings_products_cols": {
+    "message": "Products Visible Cols (Application restart required)",
+    "description": "Modal settings window label"
+  }, 
   "mdl_settings_default_printer_text": {
     "message": "-- Choose one printer --",
     "description": "Modal settings window label"

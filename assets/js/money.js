@@ -30,7 +30,7 @@ function Money(fieldID, container, addprefix) {
         if (firstRow) {
           html += '  <div class="col-sm-3">';
           html += '    <input type="numeric" value="0" name="qty" id="qty_' + this.parent.attr('id') + '" disabled class="form-control money-field bg-green"';
-          html += 'style="padding-left: 5px; padding-right: 5px; text-align: right; height: 50px; font-size: 24px;"/>';
+          html += '/>';
           html += '  </div>';
         }
         html += '</div>';
@@ -40,13 +40,13 @@ function Money(fieldID, container, addprefix) {
       }
       html += '  <div class="col-sm-2">';
       html += '    <a href="#" title="' + data[i].price + '€" style="display: block; position: relative;" class="money" data-value="' + data[i].price + '" data-prefix="' + this.prefix + '" data-id="' + this.parent.attr('id') + '" data-target="' + this.id + '">';
-      html += '      <img src="assets/img/money/' + data[i].image + '" alt="' + data[i].price + '€" style="width: 100%; height: 50px;"/>';
+      html += '      <img src="assets/img/money/' + data[i].image + '" alt="' + data[i].price + '€"/>';
       html += '      <span class="badge" style="position: absolute; top: 20%; left: 25%; font-size: 24px;">' + data[i].price + '</span>';
       html += '    </a>';
       html += '  </div>';
       html += '  <div class="col-sm-1">';
-      html += '    <input type="numeric" value="0" name="m' + String(data[i].price).replace('.', '-') + '" id="m' + this.prefix + String(data[i].price).replace('.', '-') + '" disabled class="form-control money-field"';
-      html += 'style="padding-left: 5px; padding-right: 5px; text-align: right; height: 50px; font-size: 20px;"/>';
+      html += '    <input type="numeric" value="0" name="m' + String(data[i].price).replace('.', '-') + '" id="m' + this.prefix + String(data[i].price).replace('.', '-') + '" disabled class="form-control money-inp"';
+      html += '/>';
       html += '  </div>';
     }
     html += '</div>';

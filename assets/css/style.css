@@ -112,3 +112,96 @@ a.disabled {
   margin-bottom: -10px;
   font-size: 40px;
 }
+
+#action-keys {
+  height: 291px;
+  overflow: auto;
+  padding-top: 5px;
+}
+
+#payment-board {
+  height: 80px;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  padding: 24px;
+  position: relative;
+}
+
+.money img {
+  width: 100%;
+  height: 50px;
+}
+
+.money-field {
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: right;
+  height: 50px;
+  font-size: 24px;
+}
+.money-inp {
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: right;
+  height: 50px;
+  font-size: 20px;
+}
+
+.btn-2x {
+  height: 80px;
+}
+
+@media screen and (max-height:767px){
+  #btn-ticket .btn-lg, #btn-payment .btn-lg, #btn-completed .btn-lg {
+    padding: 6px 12px !important;
+    font-size: 14px !important;
+    line-height: 1.42857143 !important;
+  }
+
+  .btn-2x {
+    height: 51px;
+  }
+
+  #cash-calc .btn-calc, #action-keys .btn-calc {
+    height: 40px !important;
+  }
+  #action-keys {
+    height: 212px;
+  }
+
+  #payment-board {
+    height: 70px;
+    padding: 20px;
+  }
+
+  #cash-money .money img, #cash-money .money-inp, #cash-money .money-field, 
+  #payment-money .money img, #payment-money .money-inp, #payment-money .money-field {
+    height: 30px;
+  }
+
+  .money .badge {
+    display: inherit;
+    top: 0px!important;
+    left: 5% !important;
+    font-size: 15px !important;
+  }
+
+  #payment-types .payment-type-item {
+    min-height: 60px !important;
+  }
+
+  #payment-types .payment-type-item .inner{
+    padding: 5px 10px;
+  }
+
+  #payment-types .payment-type-item h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+
+  #payment-types .payment-type-item .icon{
+    font-size: 55px;
+  }
+
+}

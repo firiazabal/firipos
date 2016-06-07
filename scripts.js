@@ -43,6 +43,9 @@ var gCashTotal = 0;
 var settingslogoImg = null;
 var settingslogoMime = null;
 
+var gProductsCols = 4; //Default 4
+var gProductsRows = 4; //Default 4
+
 $(document).ready(function(){
   buildModalWindows();
   loadStoredInfo();
@@ -87,6 +90,14 @@ $(document).ready(function(){
         $('#direct_print').prop('checked', (val == '1'));
         $('#direct_print').bootstrapSwitch('state', (val == '1'));
       }
+    });
+    store.get('settings_products_rows', function(val){
+      if (!val || val == null || val == '') $('#products_rows').val('4');
+      else $('#products_rows').val(val);
+    });
+    store.get('settings_products_cols', function(val){
+      if (!val || val == null || val == '') $('#products_cols').val('4');
+      else $('#products_cols').val(val);
     });
     $('#terminal_id').focus();
   });
@@ -156,6 +167,26 @@ function buildModalWindows() {
           '      <input type="text" name="logo_src" id="logo_src" class="form-control disabled" disabled/> <div class="input-group-addon" style="padding: 0px !important;"><button id="btnSelectLogo" class="btn btn-block"><i class="fa  fa-folder-open"></i></button></div>' + 
           '    </div>' + 
           '  </div>' + 
+          '</div>' + 
+          '<div class="form-group">' + 
+          '  <label for="skin" class="required">' + chrome.i18n.getMessage("mdl_settings_products_rows") + '</label>' + 
+          '  <select name="products_rows" id="products_rows" class="form-control select2">' + 
+          '    <option value="1">1</option>' + 
+          '    <option value="2">2</option>' + 
+          '    <option value="3">3</option>' + 
+          '    <option value="4">4</option>' + 
+          '    <option value="6">6</option>' + 
+          '  </select>' + 
+          '</div>' + 
+          '<div class="form-group">' + 
+          '  <label for="skin" class="required">' + chrome.i18n.getMessage("mdl_settings_products_cols") + '</label>' + 
+          '  <select name="products_cols" id="products_cols" class="form-control select2">' + 
+          '    <option value="1">1</option>' + 
+          '    <option value="2">2</option>' + 
+          '    <option value="3">3</option>' + 
+          '    <option value="4">4</option>' + 
+          '    <option value="6">6</option>' + 
+          '  </select>' + 
           '</div>' + 
           '<div class="form-group">' + 
           '  <label for="printer" class="required">' + chrome.i18n.getMessage("mdl_settings_printer") + '</label>' + 
@@ -402,6 +433,18 @@ function loadActualTerminalInfo() {
   store.get('settings_direct_print', function(val){
     if (!val || val == null || val == '') gDirectPrint = false;
     else gDirectPrint = (val=='1');
+    gLockedStore--;
+  });
+  gLockedStore++;
+  store.get('settings_products_rows', function(val){
+    if (!val || val == null || val == '') gProductsRows = 4;
+    else gProductsRows = val;
+    gLockedStore--;
+  });
+  gLockedStore++;
+  store.get('settings_products_cols', function(val){
+    if (!val || val == null || val == '') gProductsCols = 4;
+    else gProductsCols = val;
     gLockedStore--;
   });
 }

@@ -506,6 +506,8 @@ function settingsClick(e) {
   store.set('settings_logo', $('#logo_src').val());
   store.set('settings_logo_img', settingslogoImg);
   store.set('settings_logo_mime', settingslogoMime);
+  store.set('settings_products_rows', $('#products_rows').val());
+  store.set('settings_products_cols', $('#products_cols').val());
   store.set('settings_direct_print', (($('#direct_print').prop('checked'))?'1':'0'));
   loadActualTerminalInfo();
   $('#modal-settings').modal('hide');
