@@ -100,6 +100,7 @@ function Calculator(fieldID, container, type, defaultval, disabled, money) {
         if (moneyField) {
           moneyField.val('');
           $('#' + money + ' .money-field').val('0');
+          $('#' + money + ' .money-inp').val('0');
         }
       } else if (value == 'cc') {
         if (actual != null && actual.length > 0) {
@@ -117,6 +118,7 @@ function Calculator(fieldID, container, type, defaultval, disabled, money) {
         if (moneyField) {
           moneyField.val('0');
           $('#' + money + ' .money-field').val('0');
+          $('#' + money + ' .money-inp').val('0');
         }
       } else if (value == 'cc') {
         if (actual != null && actual.length > 0 && actual != '0') {

@@ -80,6 +80,7 @@ function resetPreselections() {
 function resetCalc() {
   $('#qty').val('0');
   $('.money-field').val('0');
+  $('.money-inp').val('0');
   updatePendingQty();
 }
 

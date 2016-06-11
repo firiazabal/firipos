@@ -389,6 +389,7 @@ function cashModalClick(e) {
   if (gCashGranted) {
     $('#cash-qty').val('0');
     $('.money-field').val('0');
+    $('.money-inp').val('0');
     $('#cash-lines tr').remove();
     if (gCashID == null || gCashID.length == 0 || gCashID == 0) {
       $('#cash-lines-table').hide();
