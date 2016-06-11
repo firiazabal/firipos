@@ -169,7 +169,7 @@ function selectUnselectPayment(id, selected) {
 
 function updatePendingQty() {
   var total = gTotalLines - gTotalPaid - parseFloat($('#qty').val());
-  $('#pendingqty').text(roundNumber(total, 2));
+  $('#pendingqty').text(numberFormat(roundNumber(total, 2), 2));
 }
 
 function backPaymentClick(e) {

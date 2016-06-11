@@ -94,6 +94,10 @@ function roundNumber(num) {
   return (actual / 100);
 }
 
+function numberFormat(num, decimals) {
+  return num.toFixed(decimals);
+}
+
 function setInputDate(id) {
     var field = $('#' + id);
     var today = new Date(),
