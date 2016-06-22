@@ -35,9 +35,9 @@ function _buildUsersControls(data, host) {
   $('#select-users li').remove();
   $('#users-icons').html('');
   for (var i = 0; i < data.length; i++) {
-    $('#select-users').append($('<li><a href="#" data-id="' + data[i].id + '" class="users-select"><i class="fa fa-user text-red"></i>' + data[i].name + '</a></li>'));
+    $('#select-users').append($('<li><a href="#" data-id="' + data[i].id + '" data-password="' + data[i].haspassword + '" class="users-select"><i class="fa fa-user text-red"></i>' + data[i].name + '</a></li>'));
     var icons = '<div class="col-xs-6 col-sm-4 text-center">';
-    icons += '  <a href="#" class="users-icons" data-id="' + data[i].id + '" data-name="' + data[i].name + '">';
+    icons += '  <a href="#" class="users-icons" data-id="' + data[i].id + '" data-name="' + data[i].name + '" data-password="' + data[i].haspassword + '">';
     icons += '    <img src="assets/img/no-photo.png" id="image-users-icons-' + data[i].id + '" alt="' + data[i].name;
     icons += '" class="img-circle img-thumbnail" title="' + data[i].name + '" style="border: 6px solid #e6eced; height: 120px; width: 120px;">';
     icons += '<h3 style="color: #6d1e1e; text-transform: uppercase;">' + data[i].name + '</h3>';

@@ -99,6 +99,10 @@ function loadPaymentTypes() {
   }
 }
 
+function loginNoPassword(userID, modalID) {
+  return login(userID, null, modalID);
+}
+
 function login(userID, passwordVal, modalID) {
   var host = getHostUrl();
   if (host != null && host.length > 0) {
@@ -116,6 +120,7 @@ function login(userID, passwordVal, modalID) {
               store.set('security_name', data.name);
               store.set('security_hash', data.password);
               if (mymodal) $('#' + mymodal).modal('hide');
+              else $('.dropdown.open .dropdown-toggle').dropdown('toggle');
               loadActualUser();
               loadBaseInfo();
             }

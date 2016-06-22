@@ -127,7 +127,7 @@ function buildModalWindows() {
   modalWindow.general_sm('modal-login', 'Login', '<input type="hidden" name="userLoginIdLogin" id="userLoginIdLogin" value=""/><div class="container-fluid sales-grid" id="calculator-password"></div>', true, 
     ['<button type="button" class="btn btn-default btn-lg pull-left" data-dismiss="modal">' + chrome.i18n.getMessage("mdl_btn_cancel") + '</button>', 
      '<button type="submit" class="btn btn-primary btn-lg pull-right" id="btnLogin">' + chrome.i18n.getMessage("mdl_btn_login") + '</button>']);
-  modalWindow.general_full('modal-users', '', '<div class="container-fluid sales"><div class="col-sm-4 sales-grid"><h4 class="modal-title" id="usernameUsers">' + chrome.i18n.getMessage("mdl_select_user") + '</h4>' + 
+  modalWindow.general_full('modal-users', chrome.i18n.getMessage("mdl_users"), '<div class="container-fluid sales"><div class="col-sm-4 sales-grid"><h4 class="modal-title" id="usernameUsers">' + chrome.i18n.getMessage("mdl_select_user") + '</h4>' + 
           '<div class="container-fluid" id="calculator-login">' + 
           '</div>' + 
           '<br/>' + 
@@ -136,7 +136,7 @@ function buildModalWindows() {
           '</div>' + 
           '<div class="col-sm-8 text-uppercase" id="users-icons">' + 
           chrome.i18n.getMessage("mdl_users") + 
-          '</div></div>', false, null);
+          '</div></div>', true, null);
   modalWindow.general_full('modal-settings', chrome.i18n.getMessage("mdl_settings_title"), '<div class="container-fluid sales-grid"><div class="col-xs-12">' + 
           '<div class="form-group">' + 
           '  <label for="terminal_id" class="required">' + chrome.i18n.getMessage("mdl_settings_terminal_id") + '</label>' + 

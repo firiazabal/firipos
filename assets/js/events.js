@@ -36,17 +36,29 @@ function onclickPaymentType(e) {
 }
 
 function onclickLoginCombo(e) {
-  $('#userLoginIdLogin').val($(this).data('id'));
-  $('#password').val('');
-  $('#modal-login').modal();
+  var userID = $(this).data('id');
+  var hasPass = $(this).data('password');
+  if (hasPass == '1') {
+    $('#userLoginIdLogin').val(userID);
+    $('#password').val('');
+    $('#modal-login').modal();
+  } else {
+    loginNoPassword(userID, null);
+  }
   e.preventDefault(); // prevents default
   return false;
 }
 
 function onclickUserIcon(e) {
-  $('#usernameUsers').text($(this).data('name'));
-  $('#btnLoginUsers').prop('disabled', false);
-  $('#userLoginId').val($(this).data('id'));
+  var userID = $(this).data('id');
+  var hasPass = $(this).data('password');
+  if (hasPass == '1') {
+    $('#usernameUsers').text($(this).data('name'));
+    $('#btnLoginUsers').prop('disabled', false);
+    $('#userLoginId').val(userID);
+  } else {
+    loginNoPassword(userID, 'modal-users');
+  }
   e.preventDefault(); // prevents default
   return false;
 }
