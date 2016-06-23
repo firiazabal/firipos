@@ -34,6 +34,7 @@ var gChangePriceGranted = false;
 var gChangeDiscountGranted = false;
 var gCashGranted = false;
 var gRerportGranted = false;
+var gCompletedGranted = false;
 
 var gOperations = new Array();
 

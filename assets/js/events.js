@@ -169,7 +169,7 @@ function newSaleClick(e) {
 }
 
 function completedSalesClick(e) {
-  if (gRerportGranted) {
+  if (gCompletedGranted) {
     var date = $('#modal-ticket-date').val();
     if (date == null || date.length == 0) {
       setInputDate('modal-ticket-date');

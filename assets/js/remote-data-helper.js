@@ -14,8 +14,11 @@ function _updateGrants(data) {
   }
   if (data.reports) {
     $('#sales-report').removeClass('disabled');
-    $('#tpv_completed_btn').removeClass('disabled');
     gRerportGranted = data.reports;
+  }
+  if (data.completed) {
+    $('#tpv_completed_btn').removeClass('disabled');
+    gCompletedGranted = data.completed;
   }
 }
 

@@ -64,6 +64,7 @@ function resetGrants() {
   gRerportGranted = false;
   gChangePriceGranted = false;
   gChangeDiscountGranted = false;
+  gCompletedGranted = false;
   $('#cash').removeClass('disabled');
   $('#cash').addClass('disabled');
   $('#sales-report').removeClass('disabled');
