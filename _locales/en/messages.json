@@ -11,6 +11,13 @@
     "message": "Print Ticket",
     "description": "Main window bottom check to print ticket on pay"
   },
+  "btn_opened_tickets": {
+    "message": "Pending",
+    "description": "Main window top button to show reports tickets opened"
+  },
+  "btn_opened_tickets_alt": {
+    "message": "Pending Tickets"
+  },
   "btn_completed_tickets": {
     "message": "Tickets",
     "description": "Main window top button to show reports tickets completed"
@@ -84,8 +91,8 @@
     "message": "Cancel",
     "description": "Main window, main action buttons"
   },
-  "btn_opened": {
-    "message": "Pending",
+  "btn_command": {
+    "message": "Command",
     "description": "Main window, main action buttons"
   },
   "btn_drawer": {
@@ -120,8 +127,8 @@
     "message": "New",
     "description": "Main window, completed sale action buttons"
   },
-  "btn_completed_opened": {
-    "message": "Pending",
+  "btn_completed_command": {
+    "message": "Command",
     "description": "Main window, completed sale action buttons"
   },
   "btn_completed_print": {
@@ -312,9 +319,25 @@
     "message": "Print",
     "description": "Modal window Print button"
   },
+  "mdl_add_customers_title": {
+    "message": "Add new customer",
+    "description": "Modal Add customers window title"
+  },
+  "mdl_add_customers_name": {
+    "message": "Name",
+    "description": "Modal Add customers name label"
+  },
+  "mdl_add_customers_name_required": {
+    "message": "The customer name is required",
+    "description": "Modal Add customers name required error"
+  },
   "mdl_customers_title": {
     "message": "Customers",
     "description": "Modal customers window title"
+  },
+  "mdl_customers_name": {
+    "message": "Name",
+    "description": "Modal customers table header name"
   },
   "mdl_line_title": {
     "message": "Line",
@@ -451,5 +474,61 @@
   "ajax_error_unknown": {
     "message": "Unexpected Error. Check the settings parameters and the network connection",
     "description": "Ajax error"
+  },
+  "datatables_first": {
+    "message": "First",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_last": {
+    "message": "Last",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_previous": {
+    "message": "Previous",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_next": {
+    "message": "Next",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_empty_table": {
+    "message": "No data found",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_info": {
+    "message": "_TOTAL_ record/s",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_info_empty": {
+    "message": "0 records",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_info_filtered": {
+    "message": "(Filtered of a total of _MAX_ records)",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_thousands": {
+    "message": ",",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_length_menu": {
+    "message": "_MENU_",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_loading_records": {
+    "message": "Loading...",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_processing": {
+    "message": "Processing...",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_search": {
+    "message": "Search:",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_zero_records": {
+    "message": "Zero records found",
+    "description": "JQuery Datatables translation"
   }
 }

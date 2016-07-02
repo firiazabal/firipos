@@ -63,7 +63,8 @@ function _buildOperationsControls(data) {
 
 function _buildCustomersControls(data) {
   fillSelect('drawer-customer', data, chrome.i18n.getMessage("select_one_customer_option"));
-  fillTable('customer-lines', data, customerListClick);
+  //fillTable('customer-lines', data, customerListClick);
+  fillDataTable('customer-table', 'customer-lines', data, customerListClick);
 }
 
 function _buildEmployeesControls(data) {

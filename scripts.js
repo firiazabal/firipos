@@ -54,12 +54,17 @@ $(document).ready(function(){
   //Center Modal windows on screen
   $(modalVerticalCenterClass).on('shown.bs.modal', function(e) {
     centerModals($(this));
+    $(this).find('input:visible').first().focus();
   });
   buildExtraControls();
   translation_html_labels();
   bindButtons();
 
   checkSettings();
+
+  $('#modal-add-customer').on('shown.bs.modal', function(e) {
+    $('#mdlAddCustomerName').val('');
+  });
 
 
   $('#modal-settings').on('shown.bs.modal', function (event) {
@@ -252,10 +257,21 @@ function buildModalWindows() {
         '</div>', true, 
     ['<button type="button" class="btn btn-default btn-lg pull-left" data-dismiss="modal">' + chrome.i18n.getMessage("mdl_btn_cancel") + '</button>', 
      '<button type="submit" class="btn btn-success btn-lg pull-right" id="btnSalesReportPrint">' + chrome.i18n.getMessage("mdl_btn_print") + '</button>']);
-  modalWindow.general_sm_full_table('modal-customer', chrome.i18n.getMessage("mdl_customers_title"), '<table class="table table-bordered table-condensed" id="customer-table">' + 
+  modalWindow.general_sm('modal-add-customer', chrome.i18n.getMessage("mdl_add_customers_title"), '<div class="row"><div class="col-xs-12">' + 
+        '  <div class="form-group">' + 
+        '    <label class="col-xs-3 control-label" for="mdlAddCustomerName">' + chrome.i18n.getMessage("mdl_add_customers_name") + '</label>' + 
+        '    <div class="col-xs-9"><input type="text" name="mdlAddCustomerName" id="mdlAddCustomerName" value="" class="form-control"/></div>' + 
+        '  </div>' + 
+        '</div></div>', true, 
+    ['<button type="button" class="btn btn-default btn-lg pull-left" data-dismiss="modal">' + chrome.i18n.getMessage("mdl_btn_cancel") + '</button>', 
+     '<button type="submit" class="btn btn-primary btn-lg pull-right" id="btnCustomerAdd">' + chrome.i18n.getMessage("mdl_btn_save") + '</button>']);
+  modalWindow.general_sm_full_table('modal-customer', chrome.i18n.getMessage("mdl_customers_title"), '<div class="box" style="padding: 5px;"><div class="box-body"><table class="table table-stripped table-bordered table-condensed" id="customer-table">' + 
+        '  <thead>' + 
+        '    <tr><th>' + chrome.i18n.getMessage("mdl_customers_name") + '</th></tr>' + 
+        '  </thead>' + 
         '  <tbody id="customer-lines">' + 
         '  </tbody>' + 
-        '</table>', true, 
+        '</table></div></div>', true, 
     ['<button type="button" class="btn btn-default btn-lg pull-left" data-dismiss="modal">' + chrome.i18n.getMessage("mdl_btn_cancel") + '</button>', 
      '<button type="submit" class="btn btn-danger btn-lg pull-right" id="btnCustomerRemove">' + chrome.i18n.getMessage("mdl_btn_delete") + '</button>']);
   modalWindow.general_lg('modal-product', chrome.i18n.getMessage("mdl_line_title"), '<div class="container-fluid sales"><div class="row">' + 
@@ -535,17 +551,19 @@ function bindButtons() {
   $('#calc-update-product .btn-calc').on('click', updateProductOptionQtyClick);
   $('#drawer-operations').on('change', drawerOperationSelect);
   $('#btnSaveDrawer').on('click', openDrawerClick);
+  $('#btnCustomerAdd').on('click', addCustomerClick);
   $('#btnCustomerRemove').on('click', customerSaleRemoveClick);
   $('#tpv_new_btn').on('click', newSaleClick);
   $('#tpv_cancel_btn').on('click', deleteSaleClick);
   $('#tpv_completed_new_btn').on('click', newSaleClick);
   $('#tpv_completed_btn').on('click', completedSalesClick);
   $('#modal-ticket-date').on('change', completedSalesClick);
-  $('#tpv_opened_btn').on('click', archivedSalesClick);
-  $('#tpv_completed_opened_btn').on('click', archivedSalesClick);
+  $('#tpv_command_btn').on('click', commandClick);
+  $('#tpv_completed_command_btn').on('click', commandClick);
   $('#tpv_cash_btn').on('click', cashClick);
   $('#tpv_back_btn').on('click', backPaymentClick);
   $('#tpv_add_payment_btn').on('click', addPaymentClick);
+  $('#tpv_opened_btn').on('click', archivedSalesClick);
   $('#tpv_paid_btn').on('click', completeClick);
   $('#tpv_print_btn').on('click', printSaleClick);
   $('#tpv_completed_print_btn').on('click', printSaleClick);

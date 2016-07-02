@@ -298,6 +298,20 @@ function customerListClick(e) {
   return false;
 }
 
+function addCustomerClick(e) {
+  var customer = $('#mdlAddCustomerName').val();
+  if (customer == null || customer.length == 0) {
+    messages.alert(chrome.i18n.getMessage("mdl_add_customers_name_required"));
+  } else {
+    $('#modal-add-customer').modal('hide');
+    
+    addCustomerSale(customer);
+  }
+  
+  e.preventDefault(); // prevents default
+  return false;
+}
+
 function customerSaleRemoveClick(e) {
   $('#modal-customer').modal('hide');
   var sale = $('#sale_id').val();

@@ -18,24 +18,6 @@
   <link rel="stylesheet" type="text/css" href="assets/adminlte/css/skins/_all-skins.min.css" />
   <link rel="stylesheet" type="text/css" href="assets/adminlte/css/font-awesome.min.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-  <script src="assets/js/jquery-1.11.3.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/bootstrap-switch.min.js"></script>
-  <script src="assets/js/store.js"></script>
-  <script src="assets/js/center-modals.js"></script>
-  <script src="assets/js/clock.js"></script>
-  <script src="assets/js/calculator.js"></script>
-  <script src="assets/js/money.js"></script>
-  <script src="assets/js/modal.js"></script>
-  <script src="assets/js/messages.js"></script>
-  <script src="assets/js/resize.js"></script>
-  <script src="assets/js/common.js"></script>
-  <script src="assets/js/defaults.js"></script>
-  <script src="assets/js/remote-data-helper.js"></script>
-  <script src="assets/js/remote-data.js"></script>
-  <script src="assets/js/events.js"></script>
-  <script src="i18n.js"></script>
-  <script src="scripts.js"></script>
   </head>
   <body class="hold-transition skin-red fixed layout-top-nav">
     <div class="wrapper" id="top-page">
@@ -45,24 +27,25 @@
         <!-- Header Navbar -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Logo -->
-          <div class="logo" style="line-height: 47px;">
-            <span class="logo-lg"><img src="assets/img/logo.png" style="display: none; height: 45px; width: 100%;" id="app-logo"/></span>
+          <div class="logo" style="height: 50px; max-width: 180px; padding: 0px;">
+            <span class="logo-lg" style="line-height: initial;"><img src="assets/img/logo.png" style="display: none; height: 50px; width: 100%;" id="app-logo"/></span>
           </div>
           <p class="navbar-text" id="actual-time" style="font-size: 25px; margin-top: 9px; margin-bottom: 5px; color: white;">12:12:00</p>
           <ul class="nav navbar-nav">
-            <li><a href="#" data-toggle="modal" data-target="#modal-settings" class="text-warning" id="settigns" title="Configuración"><i class="fa fa-gear"></i></a></li>
+            <li><a href="#" data-toggle="modal" data-target="#modal-settings" class="text-warning btn-lg" id="settigns" title="Configuración"><i class="fa fa-gear"></i></a></li>
+            <li><a href="#" class="text-warning btn-lg" id="tpv_opened_btn" title="Tickets pendientes"><i class="fa fa-tags"></i> <span id="i18nBtnReportOpenedTickets">Abiertos</span></a></li>
           </ul>
           <!-- Navbar Right Menu -->
-          <div class="navbar-custom-menu">
+          <div class="navbar-custom-menu" style="height: 50px;">
             <ul class="nav navbar-nav">
               <li>
-                <a href="#" class="text-warning disabled" id="tpv_completed_btn" title="Tickets pagados"><i class="fa fa-server"></i> <span id="i18nBtnReportCompletedTickets">Tickets</span></a>
+                <a href="#" class="text-warning btn-lg disabled" id="tpv_completed_btn" title="Tickets pagados"><i class="fa fa-server"></i> <span id="i18nBtnReportCompletedTickets">Tickets</span></a>
               </li>
               <li>
-                <a href="#" class="text-warning disabled" id="sales-report" title="Informe de Ventas"><i class="fa fa-print"></i> <span id="i18nBtnReportSales">Ventas</span></a>
+                <a href="#" class="text-warning btn-lg disabled" id="sales-report" title="Informe de Ventas"><i class="fa fa-print"></i> <span id="i18nBtnReportSales">Ventas</span></a>
               </li>
               <li>
-                <a href="#" class="text-warning disabled" id="cash" title="Apertura/Cierre de Caja"><i class="fa fa-euro"></i> <span id="i18nBtnCash">Caja</span></a>
+                <a href="#" class="text-warning btn-lg disabled" id="cash" title="Apertura/Cierre de Caja"><i class="fa fa-euro"></i> <span id="i18nBtnCash">Caja</span></a>
               </li>
               <!-- User Account Menu -->
               <li class="dropdown user user-menu notifications-menu">
@@ -70,7 +53,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <!-- The user image in the navbar-->
 									<!-- hidden-xs hides the username on small devices so only the image appears. -->
-                  <span class="hidden-xs" id="security_user">Admin </span><span class="caret"></span>
+                  <span class="hidden-xs btn-lg" id="security_user">Admin </span><span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
                   <li>
@@ -80,7 +63,7 @@
                 </ul>
               </li>
 							<li>
-								<a href="#" data-toggle="modal" data-target="#modal-alert" class="text-danger" id="logout" title="Apagar"><i class="fa fa-power-off"></i></a>
+								<a href="#" data-toggle="modal" data-target="#modal-alert" class="text-danger btn-lg" id="logout" title="Apagar"><i class="fa fa-power-off"></i></a>
 							</li>
             </ul>
           </div>
@@ -102,7 +85,7 @@
                 <div class="col-sm-12">
                   <div class="box box-danger box-wrapper-half box-solid" id="lines-box">
                     <div class="box-header with-border">
-                      <h3 class="box-title text-nowrap" style="width: 77%; overflow: hidden; text-overflow: ellipsis; line-height: normal;"><a href="#" class="disabled"><i class="fa fa-user-plus"></i></a> <a href="#" data-toggle="modal" data-target="#modal-customer"><span id="sale_customer">Anónimo</span></a></h3>
+                      <h3 class="box-title text-nowrap" style="width: 77%; overflow: hidden; text-overflow: ellipsis; line-height: normal;"><a href="#" data-toggle="modal" data-target="#modal-add-customer"><i class="fa fa-user-plus"></i></a> <a href="#" data-toggle="modal" data-target="#modal-customer"><span id="sale_customer">Anónimo</span></a></h3>
                       <div class="box-tools pull-right text-right" style="top: 0px;">
                         <strong id="sale_documentno"></strong><br/><span id="sale_time"></span>
                       </div>
@@ -173,7 +156,7 @@
                           <div class="col-sm-4" id="btn-ticket">
                             <button type="button" class="btn btn-primary btn-lg btn-block text-uppercase" id="tpv_new_btn"><i class="fa fa-asterisk"></i> <span id="i18nBtnNew">Nuevo</span></button>
                             <button type="button" class="btn btn-danger btn-lg btn-block text-uppercase" id="tpv_cancel_btn"><i class="fa fa-trash"></i> <span id="i18nBtnCancel">Cancelar</span></button>
-                            <button type="button" class="btn btn-warning btn-lg btn-block text-uppercase" id="tpv_opened_btn"><i class="fa fa-tags"></i> <span id="i18nBtnOpened">Abiertos</span></button>
+                            <button type="button" class="btn btn-warning btn-lg btn-block text-uppercase" id="tpv_command_btn"><i class="fa  fa-thumb-tack"></i> <span id="i18nBtnCommand">Comanda</span></button>
                             <button type="button" class="btn btn-info btn-lg btn-block text-uppercase" id="tpv_drawer_btn"><i class="fa fa-optin-monster"></i> <span id="i18nBtnDrawer">Cajón</span></button>
                             <button type="button" class="btn btn-success btn-lg btn-block text-uppercase btn-2x" id="tpv_cash_btn"><i class="fa fa-money"></i> <span id="i18nBtnTpvCash">Caja</span></button>
                           </div><!-- /.col-sm-4 -->
@@ -186,7 +169,7 @@
                           </div><!-- /.col-sm-4 -->
                           <div class="col-sm-4" id="btn-completed" style="display: none;">
                             <button type="button" class="btn btn-primary btn-lg btn-block text-uppercase" id="tpv_completed_new_btn"><i class="fa fa-asterisk"></i> <span id="i18nBtnCompletedNew">Nuevo</span></button>
-                            <button type="button" class="btn btn-warning btn-lg btn-block text-uppercase" id="tpv_completed_opened_btn"><i class="fa fa-tags"></i> <span id="i18nBtnCompletedOpened">Abiertos</span></button>
+                            <button type="button" class="btn btn-warning btn-lg btn-block text-uppercase" id="tpv_completed_command_btn"><i class="fa  fa-thumb-tack"></i> <span id="i18nBtnCompletedCommand">Comanda</span></button>
                             <button type="button" class="btn btn-warning btn-lg btn-block text-uppercase" id="tpv_completed_print_btn"><i class="fa fa-print"></i> <span id="i18nBtnCompletedPrint">Imprimir</span></button>
                             <button type="button" class="btn btn-info btn-lg btn-block text-uppercase" id="tpv_completed_drawer_ticket_btn"><i class="fa fa-optin-monster"></i> <span id="i18nBtnCompletedDrawer">Cajón</span></button>
                             <button type="button" class="btn btn-danger btn-lg btn-block text-uppercase btn-2x" data-toggle="modal" data-target="#modal-confirm-reopen"><i class="fa fa-money"></i> <span id="i18nBtnCompletedReopen">Reabrir</span></button>
@@ -220,6 +203,34 @@
       </footer>
     </div><!-- ./wrapper -->
     <webview src="" style="display: none; width: 100%; height: 100%;" id="printer-webview"></webview>
+
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-switch.min.js"></script>
+
+    <!-- DATATABLE -->
+    <link rel="stylesheet" type="text/css" href="assets/js/datatables/dataTables.bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/datatables/extensions/Responsive/css/dataTables.responsive.css" />
+    <script src="assets/js/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/js/datatables/dataTables.bootstrap.min.js"></script>
+    <script src="assets/js/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+    <!-- DATATABLE -->
+
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/center-modals.js"></script>
+    <script src="assets/js/clock.js"></script>
+    <script src="assets/js/calculator.js"></script>
+    <script src="assets/js/money.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/messages.js"></script>
+    <script src="assets/js/resize.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/defaults.js"></script>
+    <script src="assets/js/remote-data-helper.js"></script>
+    <script src="assets/js/remote-data.js"></script>
+    <script src="assets/js/events.js"></script>
+    <script src="i18n.js"></script>
+    <script src="scripts.js"></script>
 
   </body>
 </html>

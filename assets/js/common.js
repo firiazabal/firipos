@@ -36,6 +36,44 @@ function loadImageSrc(url, id) {
   xhr.send();
 }
 
+function fillDataTable(id, idLines, data, callback) {
+  $('#' + idLines + ' tr').unbind("click");
+  $('#' + idLines + ' tr').remove();
+  for (var i = 0; i < data.length; i++) {
+    $('#' + idLines).append($('<tr data-id="' + data[i].value + '" data-name="' + data[i].name + '" class="table-tr' + ((i%0)?'':' odd') + '"><td>' + data[i].name + '</td></tr>'));
+  }
+  $('#' + idLines + ' tr').on("click", callback);
+  $('#' + id).DataTable( {
+    /*"oLanguage": {
+			"sUrl": "<?php echo application_url('utils/datatable_i18n');?>"
+		},*/
+    "oLanguage": {
+      "oPaginate": {
+          "sFirst": chrome.i18n.getMessage("datatables_first"),
+          "sLast": chrome.i18n.getMessage("datatables_last"),
+          "sPrevious": chrome.i18n.getMessage("datatables_previous"),
+          "sNext": chrome.i18n.getMessage("datatables_next")
+      },
+      "sEmptyTable": chrome.i18n.getMessage("datatables_empty_table"),
+      "sInfo": chrome.i18n.getMessage("datatables_info"),
+      "sInfoEmpty": chrome.i18n.getMessage("datatables_info_empty"),
+      "sInfoFiltered": chrome.i18n.getMessage("datatables_info_filtered"),
+      "sInfoThousands": chrome.i18n.getMessage("datatables_thousands"),
+      "sLengthMenu": chrome.i18n.getMessage("datatables_length_menu"),
+      "sLoadingRecords": chrome.i18n.getMessage("datatables_loading_records"),
+      "sProcessing": chrome.i18n.getMessage("datatables_processing"),
+      "sSearch": chrome.i18n.getMessage("datatables_search"),
+      "sZeroRecords": chrome.i18n.getMessage("datatables_zero_records")
+    }, 
+    "bPaginate": true,
+    "bLengthChange": false,
+    "bFilter": true,
+    "bSort": true,
+    "bInfo": true,
+    "bAutoWidth": true
+	});
+}
+
 function fillTable(id, data, callback) {
   $('#' + id + ' tr').unbind("click");
   $('#' + id + ' tr').remove();
@@ -132,6 +170,10 @@ function parseAjaxError(jqXHR, status, errMsg) {
   } else {
     messages.alert(errMsg);
   }
+}
+
+function printCommand(id) {
+  printDirect("pointofsale/report_command/" + id);
 }
 
 function printTicket(id) {

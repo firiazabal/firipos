@@ -11,6 +11,13 @@
     "message": "Imprimir Ticket",
     "description": "Main window bottom check to print ticket on pay"
   },
+  "btn_opened_tickets": {
+    "message": "Pendientes",
+    "description": "Main window top button to show reports tickets opened"
+  },
+  "btn_opened_tickets_alt": {
+    "message": "Tickets Pendientes"
+  },
   "btn_completed_tickets": {
     "message": "Tickets",
     "description": "Main window top button to show reports tickets completed"
@@ -84,8 +91,8 @@
     "message": "Cancelar",
     "description": "Main window, main action buttons"
   },
-  "btn_opened": {
-    "message": "Abiertos",
+  "btn_command": {
+    "message": "Comanda",
     "description": "Main window, main action buttons"
   },
   "btn_drawer": {
@@ -120,8 +127,8 @@
     "message": "Nuevo",
     "description": "Main window, completed sale action buttons"
   },
-  "btn_completed_opened": {
-    "message": "Abiertos",
+  "btn_completed_command": {
+    "message": "Comanda",
     "description": "Main window, completed sale action buttons"
   },
   "btn_completed_print": {
@@ -312,9 +319,25 @@
     "message": "Imprimir",
     "description": "Modal window Print button"
   },
+  "mdl_add_customers_title": {
+    "message": "Añadir nuevo cliente",
+    "description": "Modal Add customers window title"
+  },
+  "mdl_add_customers_name": {
+    "message": "Nombre",
+    "description": "Modal Add customers name label"
+  },
+  "mdl_add_customers_name_required": {
+    "message": "Es obligatorio introducir un nombre de cliente para continuar",
+    "description": "Modal Add customers name required error"
+  },
   "mdl_customers_title": {
     "message": "Clientes",
     "description": "Modal customers window title"
+  },
+  "mdl_customers_name": {
+    "message": "Nombre",
+    "description": "Modal customers table header name"
   },
   "mdl_line_title": {
     "message": "Línea",
@@ -451,5 +474,61 @@
   "ajax_error_unknown": {
     "message": "Se ha producido un error inexperado. Compruebe que están bien los parámetros de configuración y que tiene acceso a la red",
     "description": "Ajax error"
+  },
+  "datatables_first": {
+    "message": "Primero",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_last": {
+    "message": "Último",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_previous": {
+    "message": "Anterior",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_next": {
+    "message": "Siguiente",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_empty_table": {
+    "message": "No hay datos disponibles",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_info": {
+    "message": "_TOTAL_ registro/s",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_info_empty": {
+    "message": "0 registros",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_info_filtered": {
+    "message": "(filtrados de un total de _MAX_ registros)",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_thousands": {
+    "message": ",",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_length_menu": {
+    "message": "_MENU_",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_loading_records": {
+    "message": "Cargando...",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_processing": {
+    "message": "Procesando...",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_search": {
+    "message": "Buscar:",
+    "description": "JQuery Datatables translation"
+  },
+  "datatables_zero_records": {
+    "message": "No se han encontrado coincidencias",
+    "description": "JQuery Datatables translation"
   }
 }

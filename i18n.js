@@ -1,5 +1,7 @@
 function translation_html_labels() {
   $('#settigns').attr('title', chrome.i18n.getMessage("btn_settings_alt"));
+  $('#i18nBtnReportOpenedTickets').html(chrome.i18n.getMessage("btn_opened_tickets"));
+  $('#tpv_opened_btn').attr('title', chrome.i18n.getMessage("btn_opened_tickets_alt"));
   $('#i18nBtnReportCompletedTickets').html(chrome.i18n.getMessage("btn_completed_tickets"));
   $('#tpv_completed_btn').attr('title', chrome.i18n.getMessage("btn_completed_tickets_alt"));
   $('#i18nBtnReportSales').html(chrome.i18n.getMessage("btn_sales"));
@@ -20,7 +22,8 @@ function translation_html_labels() {
 
   $('#i18nBtnNew').html(chrome.i18n.getMessage("btn_new"));
   $('#i18nBtnCancel').html(chrome.i18n.getMessage("btn_cancel"));
-  $('#i18nBtnOpened').html(chrome.i18n.getMessage("btn_opened"));
+  //$('#i18nBtnOpened').html(chrome.i18n.getMessage("btn_opened"));
+  $('#i18nBtnCommand').html(chrome.i18n.getMessage("btn_command"));
   $('#i18nBtnDrawer').html(chrome.i18n.getMessage("btn_drawer"));
   $('#i18nBtnTpvCash').html(chrome.i18n.getMessage("btn_tpv_cash"));
 
@@ -31,7 +34,8 @@ function translation_html_labels() {
   $('#i18nBtnPaid').html(chrome.i18n.getMessage("btn_paid"));
 
   $('#i18nBtnCompletedNew').html(chrome.i18n.getMessage("btn_completed_new"));
-  $('#i18nBtnCompletedOpened').html(chrome.i18n.getMessage("btn_completed_opened"));
+  //$('#i18nBtnCompletedOpened').html(chrome.i18n.getMessage("btn_completed_opened"));
+  $('#i18nBtnCompletedCommand').html(chrome.i18n.getMessage("btn_completed_command"));
   $('#i18nBtnCompletedPrint').html(chrome.i18n.getMessage("btn_completed_print"));
   $('#i18nBtnCompletedDrawer').html(chrome.i18n.getMessage("btn_completed_drawer"));
   $('#i18nBtnCompletedReopen').html(chrome.i18n.getMessage("btn_completed_reopen"));

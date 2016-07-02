@@ -136,6 +136,38 @@ function login(userID, passwordVal, modalID) {
   }
 }
 
+function commandClick(e) {
+  var host = getHostUrl();
+  if (host != null && host.length > 0) {
+    $.ajax({
+        url: host + "pointofsale/print_command",
+        type: 'post',
+        dataType: 'json',
+        success: function (data) {
+          if (data != null) {
+            if (data.error_message && data.error_message.length > 0) {
+              messages.alert(data.error_message);
+            } else {
+              if (!gDirectPrint)
+                printCommand($('#sale_id').val());
+              loadBaseInfo();
+            }
+          }
+        },
+        data: { 
+            terminal: getTerminalID(), 
+            user: getUserID(), 
+            password: getUserPassword(),
+            direct_print: (gDirectPrint?1:0),
+            sale_id: $('#sale_id').val()
+          },
+        error: parseAjaxError
+    });
+  }
+  e.preventDefault(); // prevents default
+  return false;
+}
+
 function archivedSalesClick(e) {
   var host = getHostUrl();
   if (host != null && host.length > 0) {
@@ -243,6 +275,38 @@ function deleteSale() {
             user: getUserID(), 
             password: getUserPassword(),
             sale_id: $('#sale_id').val()
+          },
+        error: parseAjaxError
+    });
+  }
+}
+
+function addCustomerSale(customer) {
+  var host = getHostUrl();
+  if (host != null && host.length > 0) {
+    $.ajax({
+        url: host + "pointofsale/add_sale_customer",
+        type: 'post',
+        dataType: 'json',
+        success: function (data) {
+          if (data != null) {
+            if (data.error_message && data.error_message.length > 0) {
+              messages.alert(data.error_message);
+            } else {
+              $('#sale_customer').html(((data.bpartner==null || data.bpartner.length == 0)?chrome.i18n.getMessage("customer_anonymous"):data.bpartner));
+              $('#customer_id').val(data.bpartner_id);
+              if (data.customers) {
+                _buildCustomersControls(data.customers);
+              }
+            }
+          }
+        },
+        data: { 
+            terminal: getTerminalID(), 
+            user: getUserID(), 
+            password: getUserPassword(),
+            sale_id: $('#sale_id').val(), 
+            customer: customer
           },
         error: parseAjaxError
     });
