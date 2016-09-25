@@ -47,6 +47,8 @@ var settingslogoMime = null;
 var gProductsCols = 4; //Default 4
 var gProductsRows = 4; //Default 4
 
+var gProductVersion;
+
 $(document).ready(function(){
   buildModalWindows();
   loadStoredInfo();
@@ -113,6 +115,9 @@ $(document).ready(function(){
   }
 
   loadUSBPrinters();
+  getVersion(function (ver) { gProductVersion = ver; $('#VersionLabel').html(gProductVersion);});
+  //gProductVersion = chrome.app.getDetails().version;
+  
   loadBaseInfo();
 
 });

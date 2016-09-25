@@ -44,9 +44,7 @@ function fillDataTable(id, idLines, data, callback) {
   }
   $('#' + idLines + ' tr').on("click", callback);
   $('#' + id).DataTable( {
-    /*"oLanguage": {
-			"sUrl": "<?php echo application_url('utils/datatable_i18n');?>"
-		},*/
+    "destroy": $.fn.dataTable.isDataTable( '#' + id ),
     "oLanguage": {
       "oPaginate": {
           "sFirst": chrome.i18n.getMessage("datatables_first"),
@@ -193,4 +191,14 @@ function printDirect(url, params) {
   if (params != null && params.length > 0)
     urlparams += "&" + params;
   $('#printer-webview').attr('src', getHostUrl() + url + "?" + urlparams);
+}
+
+function getVersion(callback) {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open('GET', 'manifest.json');
+  xmlhttp.onload = function (e) {
+    var manifest = JSON.parse(xmlhttp.responseText);
+    callback(manifest.version);
+  }
+  xmlhttp.send(null);
 }

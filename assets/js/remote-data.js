@@ -295,9 +295,9 @@ function addCustomerSale(customer) {
             } else {
               $('#sale_customer').html(((data.bpartner==null || data.bpartner.length == 0)?chrome.i18n.getMessage("customer_anonymous"):data.bpartner));
               $('#customer_id').val(data.bpartner_id);
-              if (data.customers) {
-                _buildCustomersControls(data.customers);
-              }
+            }
+            if (data.customers) {
+              _buildCustomersControls(data.customers);
             }
           }
         },
