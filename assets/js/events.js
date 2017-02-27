@@ -536,6 +536,7 @@ function settingsClick(e) {
   store.set('settings_products_rows', $('#products_rows').val());
   store.set('settings_products_cols', $('#products_cols').val());
   store.set('settings_direct_print', (($('#direct_print').prop('checked'))?'1':'0'));
+  store.set('settings_ticket_print', (($('#settings_ticket').prop('checked'))?'1':'0'));
   loadActualTerminalInfo();
   $('#modal-settings').modal('hide');
   e.preventDefault(); // prevents default
