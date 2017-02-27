@@ -211,6 +211,11 @@
     "message": "Direct printing from server",
     "description": "Modal settings window label"
   }, 
+   
+  "mdl_settings_ticket": {
+    "message": "Print ticket by default",
+    "description": "Modal settings window label"
+  }, 
   "mdl_settings_logo": {
     "message": "Logo",
     "description": "Modal settings window label"

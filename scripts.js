@@ -47,6 +47,7 @@ var settingslogoMime = null;
 var gProductsCols = 4; //Default 4
 var gProductsRows = 4; //Default 4
 
+var gTicketPrint = false;
 var gProductVersion;
 
 $(document).ready(function(){
@@ -106,6 +107,15 @@ $(document).ready(function(){
     store.get('settings_products_cols', function(val){
       if (!val || val == null || val == '') $('#products_cols').val('4');
       else $('#products_cols').val(val);
+    });
+    store.get('settings_ticket_print', function(val){
+      if (!val || val == null || val == '') {
+        $('#settings_ticket').prop('checked', false);
+        $('#settings_ticket').bootstrapSwitch('state', false);
+      } else {
+        $('#settings_ticket').prop('checked', (val == '1'));
+        $('#settings_ticket').bootstrapSwitch('state', (val == '1'));
+      }
     });
     $('#terminal_id').focus();
   });
@@ -198,6 +208,9 @@ function buildModalWindows() {
           '    <option value="4">4</option>' + 
           '    <option value="6">6</option>' + 
           '  </select>' + 
+          '</div>' + 
+          '<div class="form-group">' +
+          '  <label class="label-control" for="settings_ticket"> <span id="i18nSettingsTicket">' + chrome.i18n.getMessage("mdl_settings_ticket") + '</span> <input type="checkbox" value="1" name="settings_ticket" id="settings_ticket"/></label>' +
           '</div>' + 
           '<div class="form-group">' + 
           '  <label for="printer" class="required">' + chrome.i18n.getMessage("mdl_settings_printer") + '</label>' + 
@@ -469,6 +482,13 @@ function loadActualTerminalInfo() {
     else gProductsCols = val;
     gLockedStore--;
   });
+  gLockedStore++;
+  store.get('settings_ticket_print', function(val){
+    if (!val || val == null || val == '') gTicketPrint = true;
+    else gTicketPrint = (val == '1');
+    gLockedStore--;
+  });
+  
 }
 
 function updateSkin() {
