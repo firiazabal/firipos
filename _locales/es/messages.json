@@ -211,6 +211,10 @@
     "message": "Impresión directa desde servidor",
     "description": "Modal settings window label"
   }, 
+  "mdl_settings_ticket": {
+    "message": "Imprimir ticket por defecto",
+    "description": "Modal settings window label"
+  }, 
   "mdl_settings_logo": {
     "message": "Logo",
     "description": "Modal settings window label"

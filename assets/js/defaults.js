@@ -27,7 +27,7 @@ function loadBaseInfo() {
 function loadDefaults() {
   activatePayment(false);
   resetGrants();
-  $('#ticket-print').prop('checked', true);
+  $('#ticket-print').prop('checked', gTicketPrint);
   $("#ticket-print").change();
   $('#sale_id').val('');
   $('#customer_id').val('');
