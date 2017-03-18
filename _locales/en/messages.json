@@ -11,6 +11,10 @@
     "message": "Print Ticket",
     "description": "Main window bottom check to print ticket on pay"
   },
+  "last_cashback": {
+    "message": "Last Cashback:",
+    "description": "Main window bottom label"
+  },
   "btn_opened_tickets": {
     "message": "Pending",
     "description": "Main window top button to show reports tickets opened"

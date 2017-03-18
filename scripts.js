@@ -50,6 +50,8 @@ var gProductsRows = 4; //Default 4
 var gTicketPrint = false;
 var gProductVersion;
 
+var gLastCashback = 0;
+
 $(document).ready(function(){
   buildModalWindows();
   loadStoredInfo();

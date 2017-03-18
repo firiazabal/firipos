@@ -11,6 +11,10 @@
     "message": "Imprimir Ticket",
     "description": "Main window bottom check to print ticket on pay"
   },
+  "last_cashback": {
+    "message": "Última vuelta:",
+    "description": "Main window bottom label"
+  },
   "btn_opened_tickets": {
     "message": "Pendientes",
     "description": "Main window top button to show reports tickets opened"

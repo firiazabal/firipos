@@ -584,7 +584,7 @@ function saveCompleteSale(qty, qtypaid) {
   if (host != null && host.length > 0) {
     $('#tpv_paid_btn').button('loading');
     $('#tpv_add_payment_btn').button('loading');
-
+    gLastCashback = qtypaid - qty;
     $.ajax({
         url: host + "pointofsale/sale_complete",
         type: 'post',

@@ -42,4 +42,5 @@ function translation_html_labels() {
 
   $('#i18nPrintTicket').html(chrome.i18n.getMessage("print_ticket"));
   $('#i18nCopyright').html(chrome.i18n.getMessage("copyright"));
+  $('#i18nLastCashback').html(chrome.i18n.getMessage("last_cashback"));
 }
