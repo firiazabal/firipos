@@ -1,7 +1,7 @@
 {
   "name": "__MSG_ext_title__",
   "description": "__MSG_ext_description__",
-  "version": "4.6.7",
+  "version": "4.6.8",
   "manifest_version": 2,
   "default_locale": "en",
   "app": {

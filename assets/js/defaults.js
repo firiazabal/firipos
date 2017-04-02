@@ -1,5 +1,5 @@
 function loadBaseInfo() {
-  $('#lastCashback').html(gLastCashback + "&euro;");
+  $('#lastCashback').html(roundNumber(gLastCashback) + "&euro;");
   if (gLockedStore) {
     setTimeout(function () {loadBaseInfo();}, 500);
   } else {
@@ -46,7 +46,7 @@ function loadDefaults() {
   gLinesId = new Array();
   gTotalLines = 0.00;
   gTotalPaid = 0.00;
-  $('#lastCashback').html(gLastCashback + "&euro;");
+  $('#lastCashback').html(roundNumber(gLastCashback) + "&euro;");
 }
 
 function currencyUpdate() {

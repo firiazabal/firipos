@@ -12,7 +12,7 @@
     "description": "Main window bottom check to print ticket on pay"
   },
   "last_cashback": {
-    "message": "Última vuelta:",
+    "message": "Último cambio:",
     "description": "Main window bottom label"
   },
   "btn_opened_tickets": {
