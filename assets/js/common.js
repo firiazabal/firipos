@@ -107,6 +107,10 @@ function fillSalesTable(id, line_id_prefix, data, callback) {
     if (customer == null || customer.length == 0) customer = '';
     td = $('<td>' + customer + '</td>');
     tr.append(td);
+    var paymenttype = data[i].paymenttype;
+    if (paymenttype == null || paymenttype.length == 0) paymenttype = '';
+    td = $('<td>' + paymenttype + '</td>');
+    tr.append(td);
     td = $('<td class="text-right">' + data[i].lines.toString() + '</td>');
     tr.append(td);
     td = $('<td class="text-success text-right total">' + data[i].total.toString() + '</td>');
