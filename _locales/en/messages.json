@@ -268,6 +268,10 @@
     "message": "Customer",
     "description": "Modal opened sales window label"
   },
+  "mdl_opened_sales_paymenttype": {
+    "message": "Payment",
+    "description": "Modal opened sales window label"
+  },
   "mdl_opened_sales_lines": {
     "message": "Lines",
     "description": "Modal opened sales window label"
@@ -294,6 +298,10 @@
   },
   "mdl_completed_sales_customer": {
     "message": "Customer",
+    "description": "Modal Completed sales window label"
+  },
+  "mdl_completed_sales_paymenttype": {
+    "message": "Payment",
     "description": "Modal Completed sales window label"
   },
   "mdl_completed_sales_lines": {

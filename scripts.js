@@ -230,6 +230,7 @@ function buildModalWindows() {
           '    <th>' + chrome.i18n.getMessage("mdl_opened_sales_time") + '</th>' + 
           '    <th>' + chrome.i18n.getMessage("mdl_opened_sales_employee") + '</th>' + 
           '    <th>' + chrome.i18n.getMessage("mdl_opened_sales_customer") + '</th>' + 
+          '    <th>' + chrome.i18n.getMessage("mdl_opened_sales_paymenttype") + '</th>' + 
           '    <th class="text-right">' + chrome.i18n.getMessage("mdl_opened_sales_lines") + '</th>' + 
           '    <th class="text-right">' + chrome.i18n.getMessage("mdl_opened_sales_total") + '</th>' + 
           '  </tr>' + 
@@ -244,6 +245,7 @@ function buildModalWindows() {
           '    <th>' + chrome.i18n.getMessage("mdl_completed_sales_time") + '</th>' + 
           '    <th>' + chrome.i18n.getMessage("mdl_completed_sales_employee") + '</th>' + 
           '    <th>' + chrome.i18n.getMessage("mdl_completed_sales_customer") + '</th>' + 
+          '    <th>' + chrome.i18n.getMessage("mdl_completed_sales_paymenttype") + '</th>' + 
           '    <th class="text-right">' + chrome.i18n.getMessage("mdl_completed_sales_lines") + '</th>' + 
           '    <th class="text-right">' + chrome.i18n.getMessage("mdl_completed_sales_total") + '</th>' + 
           '  </tr>' + 
